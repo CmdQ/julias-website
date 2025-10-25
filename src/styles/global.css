@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+body {
+	background-color: rgb(237 235 180); /* Your custom warm cream background */
+	color: #3b372f; /* Dark text for good contrast */
+	margin: 0;
+	font-family: "Source Serif Pro", ui-serif, Georgia, serif;
+}
+
+/* Test to see if custom colors work */
+.test-highlight {
+	background-color: rgb(226 219 70);
+	padding: 1rem;
+}

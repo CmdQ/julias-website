@@ -7,9 +7,9 @@ export default {
 		extend: {
 			colors: {
 				brand: {
-					light: '#f1ede4',
-					sand: '#d9c8a9',
-					dark: '#3b372f',
+					bg: '237 235 180', // Main background - warm cream
+					highlight: '226 219 70', // Highlight color - vibrant yellow-green
+					dark: '#3b372f', // Keep existing dark for text
 				},
 			},
 			fontFamily: {

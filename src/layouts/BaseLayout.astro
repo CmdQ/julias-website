@@ -50,7 +50,7 @@ const switchHref =
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
 ---
 <!DOCTYPE html>
-<html lang={lang} class="min-h-full bg-[#f1ede4] text-slate-900">
+<html lang={lang} class="min-h-full bg-brand-bg text-brand-dark">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -64,19 +64,33 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString(
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	</head>
 	<body class="min-h-screen">
-		<a href="#main-content" class="absolute left-4 top-4 inline-flex -translate-y-full rounded bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow focus:translate-y-0 focus:outline-none focus:ring focus:ring-slate-500">
+		<a href="#main-content" class="absolute left-4 top-4 z-50 inline-flex -translate-y-full rounded bg-white px-4 py-2 text-sm font-semibold text-brand-dark shadow focus:translate-y-0 focus:outline-none focus:ring focus:ring-brand-highlight">
 			Skip to content
 		</a>
-		<header class="border-b border-[#d9c8a9] bg-[#f1ede4]/90 backdrop-blur">
+		
+		<!-- Hero Image Placeholder - scrolls away -->
+		<div class="relative h-64 bg-gradient-to-b from-[rgb(250,248,220)] to-[rgb(237,235,180)] sm:h-80 lg:h-96">
+			<div class="absolute inset-0 flex items-center justify-center">
+				<div class="text-center">
+					<div class="mx-auto mb-4 h-24 w-48 rounded-lg bg-white/50 border-2 border-dashed border-gray-400 flex items-center justify-center">
+						<span class="text-sm text-gray-600 font-medium">Header Image Placeholder</span>
+					</div>
+					<p class="text-sm text-gray-600 italic">Wide format image to be added here</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Sticky Navigation -->
+		<header class="sticky top-0 z-40 bg-[rgb(226,219,70)]">
 			<div class="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-8 sm:flex-row sm:items-end sm:justify-between">
 				<div>
-					<p class="text-sm uppercase tracking-[0.2em] text-slate-600">{lang === 'en' ? "Educator & Artist" : 'Pädagogin & Künstlerin'}</p>
-					<h1 class="m-0 text-3xl font-bold text-slate-950">Julia Salomon</h1>
+					<p class="text-sm uppercase tracking-[0.2em] text-brand-dark/70">{lang === 'en' ? "Educator & Artist" : 'Pädagogin & Künstlerin'}</p>
+					<h1 class="m-0 text-3xl font-bold text-brand-dark">Julia Salomon</h1>
 				</div>
 				<nav aria-label={lang === 'en' ? 'Primary' : 'Hauptnavigation'} class="grid gap-2 text-base sm:grid-cols-5 sm:gap-4">
 					{navItems.map((item) => (
 						<a
-							class="rounded px-3 py-1 text-center font-medium text-slate-800 transition hover:bg-[#d9c8a9]/40 focus:bg-[#d9c8a9]/60 focus:outline-none focus:ring-2 focus:ring-offset-2"
+							class="rounded px-3 py-1 text-center font-medium text-brand-dark transition hover:bg-brand-dark/20 focus:bg-brand-dark/30 focus:outline-none focus:ring-2 focus:ring-brand-dark focus:ring-offset-2"
 							href={item.href}
 						>
 							{item.label}
@@ -88,10 +102,10 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString(
 		<main id="main-content" class="mx-auto w-full max-w-5xl px-6 py-12 sm:px-12">
 			<slot />
 		</main>
-		<footer class="border-t border-[#d9c8a9] bg-[#f1ede4]">
+		<footer class="bg-brand-bg">
 			<div class="mx-auto flex w-full max-w-5xl flex-col gap-4 px-6 py-8 sm:flex-row sm:items-center sm:justify-between">
-				<p class="m-0 text-sm text-slate-600">© {new Date().getFullYear()} Julia Salomon</p>
-				<a class="inline-flex items-center gap-2 text-sm font-semibold" href={switchHref}>
+				<p class="m-0 text-sm text-brand-dark/70">© {new Date().getFullYear()} Julia Salomon</p>
+				<a class="inline-flex items-center gap-2 text-sm font-semibold text-brand-dark hover:text-brand-dark/80" href={switchHref}>
 					<span aria-hidden="true">🌐</span>
 					{lang === 'en' ? 'Deutsch' : 'English'}
 				</a>
