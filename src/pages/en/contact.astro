@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const lang = 'en';
+const alternates = {
+	de: '/de/contact/',
+};
+const contactEmail = 'info@julia-salomon.de';
+---
+<BaseLayout lang={lang} title="Contact" description="Get in touch with Julia Salomon for collaborations, talks, or workshops." alternates={alternates}>
+	<section class="flex flex-col gap-6">
+		<h2 class="text-3xl font-bold text-slate-900">Let’s collaborate</h2>
+		<p class="max-w-2xl text-lg leading-relaxed text-slate-700">
+			I work with educators, museums, NGOs, and creative studios around the world. Share a few details about your idea and I’ll follow up within a few days.
+		</p>
+		<dl class="space-y-4 text-base text-slate-700">
+			<div>
+				<dt class="font-semibold uppercase tracking-[0.2em] text-slate-600">Email</dt>
+				<dd>
+					<a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+				</dd>
+			</div>
+			<div>
+				<dt class="font-semibold uppercase tracking-[0.2em] text-slate-600">Availability</dt>
+				<dd>Currently booking virtual and in-person engagements for Q1–Q3 2026.</dd>
+			</div>
+		</dl>
+	</section>
+</BaseLayout>

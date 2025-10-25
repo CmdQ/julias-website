@@ -1,0 +1,101 @@
+---
+import '../styles/global.css';
+
+interface AlternateLinks {
+	en?: string;
+	de?: string;
+}
+
+interface Props {
+	lang: 'en' | 'de';
+	title: string;
+	description?: string;
+	alternates?: AlternateLinks;
+}
+
+const siteName = "Julia's Portfolio";
+const { lang, title, description, alternates = {} }: Props = Astro.props;
+const pageTitle = title ? `${title} · ${siteName}` : siteName;
+const localeNav = {
+	en: [
+		{ href: '/en/', label: 'Home' },
+		{ href: '/en/project-futopia/', label: 'Project Futopia' },
+		{ href: '/en/climate-education/', label: 'Climate Education' },
+		{ href: '/en/creative-projects/', label: 'Creative Projects' },
+		{ href: '/en/contact/', label: 'Contact' },
+	],
+	de: [
+		{ href: '/de/', label: 'Startseite' },
+		{ href: '/de/project-futopia/', label: 'Projekt Futopia' },
+		{ href: '/de/climate-education/', label: 'Klimabildung' },
+		{ href: '/de/creative-projects/', label: 'Kreative Projekte' },
+		{ href: '/de/contact/', label: 'Kontakt' },
+	],
+} as const;
+
+const navItems = localeNav[lang];
+const alternatesWithDefaults: AlternateLinks = {
+	en: '/en/',
+	de: '/de/',
+	...alternates,
+};
+const otherLocale = lang === 'en' ? 'de' : 'en';
+const urlFromAlternate = alternatesWithDefaults[otherLocale as keyof AlternateLinks];
+const switchHref =
+	typeof urlFromAlternate === 'string'
+		? urlFromAlternate
+		: otherLocale === 'en'
+		? '/en/'
+		: '/de/';
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
+---
+<!DOCTYPE html>
+<html lang={lang} class="min-h-full bg-[#f1ede4] text-slate-900">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+		{canonical && <link rel="canonical" href={canonical} />}
+		{description && <meta name="description" content={description} />}
+		{Object.entries(alternatesWithDefaults).map(([locale, href]) => (
+			<link rel="alternate" hreflang={locale} href={href ?? '#'} />
+		))}
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	</head>
+	<body class="min-h-screen">
+		<a href="#main-content" class="absolute left-4 top-4 inline-flex -translate-y-full rounded bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow focus:translate-y-0 focus:outline-none focus:ring focus:ring-slate-500">
+			Skip to content
+		</a>
+		<header class="border-b border-[#d9c8a9] bg-[#f1ede4]/90 backdrop-blur">
+			<div class="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-8 sm:flex-row sm:items-end sm:justify-between">
+				<div>
+					<p class="text-sm uppercase tracking-[0.2em] text-slate-600">{lang === 'en' ? "Educator & Artist" : 'Pädagogin & Künstlerin'}</p>
+					<h1 class="m-0 text-3xl font-bold text-slate-950">Julia Salomon</h1>
+				</div>
+				<nav aria-label={lang === 'en' ? 'Primary' : 'Hauptnavigation'} class="grid gap-2 text-base sm:grid-cols-5 sm:gap-4">
+					{navItems.map((item) => (
+						<a
+							class="rounded px-3 py-1 text-center font-medium text-slate-800 transition hover:bg-[#d9c8a9]/40 focus:bg-[#d9c8a9]/60 focus:outline-none focus:ring-2 focus:ring-offset-2"
+							href={item.href}
+						>
+							{item.label}
+						</a>
+					))}
+				</nav>
+			</div>
+		</header>
+		<main id="main-content" class="mx-auto w-full max-w-5xl px-6 py-12 sm:px-12">
+			<slot />
+		</main>
+		<footer class="border-t border-[#d9c8a9] bg-[#f1ede4]">
+			<div class="mx-auto flex w-full max-w-5xl flex-col gap-4 px-6 py-8 sm:flex-row sm:items-center sm:justify-between">
+				<p class="m-0 text-sm text-slate-600">© {new Date().getFullYear()} Julia Salomon</p>
+				<a class="inline-flex items-center gap-2 text-sm font-semibold" href={switchHref}>
+					<span aria-hidden="true">🌐</span>
+					{lang === 'en' ? 'Deutsch' : 'English'}
+				</a>
+			</div>
+		</footer>
+	</body>
+</html>

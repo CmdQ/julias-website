@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const lang = 'en';
+const alternates = {
+	de: '/de/',
+};
+---
+<BaseLayout lang={lang} title="Home" description="Educator and artist Julia Salomon supports climate literacy and creative learning." alternates={alternates}>
+	<section class="flex flex-col gap-6">
+		<h2 class="text-3xl font-bold text-slate-900">Helping people make sense of our shared future</h2>
+		<p class="max-w-3xl text-lg leading-relaxed text-slate-700">
+			I design learning experiences that weave together climate science, systems thinking, and creative practice. From hands-on workshops to long-term partnerships, I help teams communicate complex ideas with clarity and empathy.
+		</p>
+		<div class="flex flex-wrap gap-4">
+			<a class="inline-flex items-center gap-2 rounded-full bg-[#3b372f] px-5 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#f1ede4] transition hover:bg-[#1e1b16] focus:outline-none focus:ring-2 focus:ring-offset-2" href="/en/project-futopia/">
+				<span aria-hidden="true">→</span>
+				Project Futopia
+			</a>
+			<a class="inline-flex items-center gap-2 rounded-full border border-[#3b372f] px-5 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#3b372f] transition hover:bg-[#3b372f] hover:text-[#f1ede4] focus:outline-none focus:ring-2 focus:ring-offset-2" href="/en/creative-projects/">
+				Creative Projects
+			</a>
+		</div>
+	</section>
+	<section class="grid gap-8 md:grid-cols-2">
+		<article class="rounded-lg bg-white/70 p-6 shadow-sm">
+			<h3 class="text-xl font-semibold text-slate-900">Climate education & facilitation</h3>
+			<p class="mt-3 text-base leading-relaxed text-slate-700">
+				Interactive workshops, tailored curricula, and community programs that build climate literacy and agency for learners of all ages.
+			</p>
+		</article>
+		<article class="rounded-lg bg-white/70 p-6 shadow-sm">
+			<h3 class="text-xl font-semibold text-slate-900">Creative storytelling</h3>
+			<p class="mt-3 text-base leading-relaxed text-slate-700">
+				Collaborative art and media projects that translate scientific insight into human stories, helping audiences connect with possible futures.
+			</p>
+		</article>
+	</section>
+</BaseLayout>

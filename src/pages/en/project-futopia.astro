@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const lang = 'en';
+const alternates = {
+	de: '/de/project-futopia/',
+};
+---
+<BaseLayout lang={lang} title="Project Futopia" description="Project Futopia helps learners imagine equitable climate futures through hands-on storytelling." alternates={alternates}>
+	<section class="flex flex-col gap-6">
+		<h2 class="text-3xl font-bold text-slate-900">Project Futopia</h2>
+		<p class="max-w-3xl text-lg leading-relaxed text-slate-700">
+			Project Futopia is a collaborative studio where students, educators, and communities visualize just climate futures. Through speculative design, collective storytelling, and research-backed facilitation, participants build narratives that inspire practical action.
+		</p>
+	</section>
+	<section class="grid gap-8 lg:grid-cols-2">
+		<article class="rounded-lg bg-white/70 p-6 shadow-sm">
+			<h3 class="text-xl font-semibold text-slate-900">Workshops</h3>
+			<p class="mt-3 text-base leading-relaxed text-slate-700">
+				Custom workshops guide teams through systems mapping, persona development, and visual storytelling to articulate climate-positive strategies.
+			</p>
+		</article>
+		<article class="rounded-lg bg-white/70 p-6 shadow-sm">
+			<h3 class="text-xl font-semibold text-slate-900">Studio Residencies</h3>
+			<p class="mt-3 text-base leading-relaxed text-slate-700">
+				Longer engagements embed the Futopia methodology within your organization, culminating in public showcases or toolkits for ongoing use.
+			</p>
+		</article>
+	</section>
+</BaseLayout>
