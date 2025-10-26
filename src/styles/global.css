@@ -1,14 +1,59 @@
 @import "tailwindcss";
 
 body {
-	background-color: rgb(237 235 180); /* Your custom warm cream background */
+	background-color: rgb(240, 238, 182); /* Your custom warm cream background */
 	color: #3b372f; /* Dark text for good contrast */
 	margin: 0;
 	font-family: "Source Serif Pro", ui-serif, Georgia, serif;
+	scroll-behavior: smooth;
 }
 
-/* Test to see if custom colors work */
-.test-highlight {
+/* Enhance text selection */
+::selection {
 	background-color: rgb(226 219 70);
-	padding: 1rem;
+	color: #3b372f;
+}
+
+/* Add subtle animation to page content */
+main {
+	animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgb(237 235 180);
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgb(226 219 70);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(216 209 50);
+}
+
+/* Override serif font for buttons and interactive elements */
+button, a[class*="group"], .btn {
+	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+	font-weight: 700 !important;
+	line-height: 1 !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
 }
