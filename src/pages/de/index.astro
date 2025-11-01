@@ -17,13 +17,13 @@ const { Content } = await entry.render();
 		<Content />
 	</article>
 	<div class="mt-8 flex flex-wrap gap-4">
-		<a class="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-r from-[rgb(226,219,70)] to-[rgb(216,209,50)] px-8 py-5 text-base font-bold text-brand-dark shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[rgb(226,219,70)]/50 before:absolute before:inset-0 before:bg-white/20 before:translate-x-[-100%] before:transition-transform before:duration-500 hover:before:translate-x-[100%]" href="/de/project-futopia/" style="font-family: ui-sans-serif, system-ui, sans-serif; line-height: 1;">
-			<span aria-hidden="true" class="text-lg transition-transform group-hover:translate-x-1 relative z-10">→</span>
-			<span class="relative z-10">Projekt Futopia</span>
+		<a class="btn-primary" href="/de/project-futopia/">
+			<span class="btn-icon" aria-hidden="true">→</span>
+			<span class="btn-text">Projekt Futopia</span>
 		</a>
-		<a class="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-2xl bg-white/90 backdrop-blur-sm border border-[rgb(226,219,70)]/30 px-8 py-5 text-base font-bold text-brand-dark shadow-lg transition-all duration-300 hover:bg-[rgb(226,219,70)] hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[rgb(226,219,70)]/50 before:absolute before:inset-0 before:bg-gradient-to-r before:from-[rgb(226,219,70)] before:to-[rgb(216,209,50)] before:translate-y-[100%] before:transition-transform before:duration-300 hover:before:translate-y-0" href="/de/creative-projects/" style="font-family: ui-sans-serif, system-ui, sans-serif; line-height: 1;">
-			<span aria-hidden="true" class="text-lg transition-transform group-hover:translate-x-1 relative z-10">✦</span>
-			<span class="relative z-10">Kreative Projekte</span>
+		<a class="btn-secondary" href="/de/creative-projects/">
+			<span class="btn-icon" aria-hidden="true">✦</span>
+			<span class="btn-text">Kreative Projekte</span>
 		</a>
 	</div>
 </BaseLayout>

@@ -1,8 +1,20 @@
 @import "tailwindcss";
 
+/* ============================================
+   COLOR PALETTE - All colors in one place
+   ============================================ */
+:root {
+	--color-bg-cream: rgb(240, 238, 182);      /* 1. Warm cream background */
+	--color-highlight: rgb(226, 219, 70);      /* 2. Bright yellow highlight */
+	--color-highlight-dark: rgb(216, 209, 50); /* 3. Darker yellow for gradients */
+	--color-text-dark: rgb(59, 55, 47);        /* 4. Dark brown text */
+	--color-text-muted: rgb(51, 65, 85);       /* 5. Muted text for prose */
+	--color-white: rgb(255, 255, 255);         /* 6. Pure white */
+}
+
 body {
-	background-color: rgb(240, 238, 182); /* Your custom warm cream background */
-	color: #3b372f; /* Dark text for good contrast */
+	background-color: var(--color-bg-cream);
+	color: var(--color-text-dark);
 	margin: 0;
 	font-family: "Source Serif Pro", ui-serif, Georgia, serif;
 	scroll-behavior: smooth;
@@ -10,8 +22,8 @@ body {
 
 /* Enhance text selection */
 ::selection {
-	background-color: rgb(226 219 70);
-	color: #3b372f;
+	background-color: var(--color-highlight);
+	color: var(--color-text-dark);
 }
 
 /* Add subtle animation to page content */
@@ -48,7 +60,7 @@ button, a[class*="group"], .btn {
 .prose h2 {
 	font-size: 1.875rem;
 	font-weight: 700;
-	color: rgb(15 23 42);
+	color: var(--color-text-dark);
 	margin-bottom: 1rem;
 	margin-top: 2rem;
 }
@@ -60,7 +72,7 @@ button, a[class*="group"], .btn {
 .prose h3 {
 	font-size: 1.25rem;
 	font-weight: 600;
-	color: rgb(15 23 42);
+	color: var(--color-text-dark);
 	margin-bottom: 0.75rem;
 	margin-top: 1.5rem;
 }
@@ -68,10 +80,115 @@ button, a[class*="group"], .btn {
 .prose p {
 	font-size: 1.125rem;
 	line-height: 1.75;
-	color: rgb(51 65 85);
+	color: var(--color-text-muted);
 	margin-bottom: 1rem;
 }
 
 .prose section {
 	margin-bottom: 2rem;
+}
+
+/* ============================================
+   BUTTON STYLES - Reusable button components
+   ============================================ */
+.btn-primary {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.75rem;
+	overflow: hidden;
+	border-radius: 1rem;
+	background: linear-gradient(to right, var(--color-highlight), var(--color-highlight-dark));
+	padding: 1.25rem 2rem;
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--color-text-dark);
+	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+	transition: all 0.3s;
+	text-decoration: none;
+}
+
+.btn-primary:hover {
+	box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+	transform: scale(1.05);
+}
+
+.btn-primary:focus {
+	outline: none;
+	box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-highlight) 50%, transparent);
+}
+
+.btn-primary::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-color: color-mix(in srgb, var(--color-white) 20%, transparent);
+	transform: translateX(-100%);
+	transition: transform 0.5s;
+}
+
+.btn-primary:hover::before {
+	transform: translateX(100%);
+}
+
+.btn-secondary {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.75rem;
+	overflow: hidden;
+	border-radius: 1rem;
+	background-color: color-mix(in srgb, var(--color-white) 90%, transparent);
+	backdrop-filter: blur(4px);
+	border: 1px solid color-mix(in srgb, var(--color-highlight) 30%, transparent);
+	padding: 1.25rem 2rem;
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--color-text-dark);
+	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+	transition: all 0.3s;
+	text-decoration: none;
+}
+
+.btn-secondary:hover {
+	background-color: var(--color-highlight);
+	box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+	transform: scale(1.05);
+}
+
+.btn-secondary:focus {
+	outline: none;
+	box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-highlight) 50%, transparent);
+}
+
+.btn-secondary::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(to right, var(--color-highlight), var(--color-highlight-dark));
+	transform: translateY(100%);
+	transition: transform 0.3s;
+}
+
+.btn-secondary:hover::before {
+	transform: translateY(0);
+}
+
+.btn-icon {
+	font-size: 1.125rem;
+	transition: transform 0.3s;
+	position: relative;
+	z-index: 10;
+}
+
+.btn-primary:hover .btn-icon,
+.btn-secondary:hover .btn-icon {
+	transform: translateX(0.25rem);
+}
+
+.btn-text {
+	position: relative;
+	z-index: 10;
 }
