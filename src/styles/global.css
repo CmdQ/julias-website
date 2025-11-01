@@ -30,24 +30,6 @@ main {
 	}
 }
 
-/* Custom scrollbar for webkit browsers */
-::-webkit-scrollbar {
-	width: 8px;
-}
-
-::-webkit-scrollbar-track {
-	background: rgb(237 235 180);
-}
-
-::-webkit-scrollbar-thumb {
-	background: rgb(226 219 70);
-	border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background: rgb(216 209 50);
-}
-
 /* Override serif font for buttons and interactive elements */
 button, a[class*="group"], .btn {
 	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
