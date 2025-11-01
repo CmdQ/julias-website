@@ -57,3 +57,61 @@ button, a[class*="group"], .btn {
 	align-items: center !important;
 	justify-content: center !important;
 }
+
+/* Prose styling for Markdown content */
+.prose {
+	max-width: none;
+}
+
+.prose h2 {
+	font-size: 1.875rem;
+	font-weight: 700;
+	color: rgb(15 23 42);
+	margin-bottom: 1rem;
+	margin-top: 2rem;
+}
+
+.prose h2:first-child {
+	margin-top: 0;
+}
+
+.prose h3 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: rgb(15 23 42);
+	margin-bottom: 0.75rem;
+	margin-top: 1.5rem;
+}
+
+.prose p {
+	font-size: 1.125rem;
+	line-height: 1.75;
+	color: rgb(51 65 85);
+	margin-bottom: 1rem;
+}
+
+.prose ul, .prose ol {
+	margin-bottom: 1rem;
+	padding-left: 1.5rem;
+	color: rgb(51 65 85);
+}
+
+.prose li {
+	margin-bottom: 0.5rem;
+	line-height: 1.75;
+}
+
+.prose strong {
+	font-weight: 700;
+	color: rgb(15 23 42);
+}
+
+.prose hr {
+	margin: 2rem 0;
+	border: none;
+	border-top: 1px solid rgb(226 232 240);
+}
+
+.prose section {
+	margin-bottom: 2rem;
+}

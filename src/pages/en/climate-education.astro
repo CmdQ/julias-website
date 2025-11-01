@@ -1,34 +1,19 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
 const lang = 'en';
 const alternates = {
 	de: '/de/climate-education/',
 };
+
+const allPages = await getCollection('pages');
+const entry = allPages.find(p => p.id === 'en/climate-education.md');
+if (!entry) throw new Error('Page content not found');
+const { Content } = await entry.render();
 ---
-<BaseLayout lang={lang} title="Climate Education" description="Talks, curricula, and facilitation that make climate science personal and actionable." alternates={alternates}>
-	<section class="flex flex-col gap-6">
-		<h2 class="text-3xl font-bold text-slate-900">Speaking & facilitation</h2>
-		<p class="max-w-3xl text-lg leading-relaxed text-slate-700">
-			I support museums, schools, and civic groups with climate literacy programs that emphasize agency, emotional resilience, and community imagination. Talks blend visual storytelling with evidence-based frameworks so audiences leave with the tools to lead change.
-		</p>
-	</section>
-	<section class="grid gap-8 md:grid-cols-2">
-		<article class="rounded-lg bg-white/70 p-6 shadow-sm">
-			<h3 class="text-xl font-semibold text-slate-900">Keynotes</h3>
-			<ul class="mt-3 space-y-2 text-base text-slate-700">
-				<li>Climate storytelling for systemic change</li>
-				<li>Designing hopeful, science-aligned learning spaces</li>
-				<li>Supporting learner emotions in the climate classroom</li>
-			</ul>
-		</article>
-		<article class="rounded-lg bg-white/70 p-6 shadow-sm">
-			<h3 class="text-xl font-semibold text-slate-900">Programs</h3>
-			<ul class="mt-3 space-y-2 text-base text-slate-700">
-				<li>Semester-long curricula co-developed with educators</li>
-				<li>Professional development for facilitators and guides</li>
-				<li>Community dialogues with actionable next steps</li>
-			</ul>
-		</article>
-	</section>
+<BaseLayout lang={lang} title="Climate Education" description={entry.data.description} alternates={alternates}>
+	<article class="prose">
+		<Content />
+	</article>
 </BaseLayout>

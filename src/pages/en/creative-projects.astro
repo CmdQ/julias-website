@@ -1,36 +1,19 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
 const lang = 'en';
 const alternates = {
 	de: '/de/creative-projects/',
 };
+
+const allPages = await getCollection('pages');
+const entry = allPages.find(p => p.id === 'en/creative-projects.md');
+if (!entry) throw new Error('Page content not found');
+const { Content } = await entry.render();
 ---
-<BaseLayout lang={lang} title="Creative Projects" description="Collaborative art and media projects that translate complex ideas into human stories." alternates={alternates}>
-	<section class="flex flex-col gap-6">
-		<h2 class="text-3xl font-bold text-slate-900">Creative practice</h2>
-		<p class="max-w-3xl text-lg leading-relaxed text-slate-700">
-			From illustrated essays to interactive installations, my creative work helps people connect emotionally with climate futures. Each project is grounded in research and co-created with the communities it serves.
-		</p>
-	</section>
-	<section class="grid gap-8 lg:grid-cols-3">
-		<article class="rounded-lg bg-white/70 p-6 shadow-sm">
-			<h3 class="text-xl font-semibold text-slate-900">Illustration</h3>
-			<p class="mt-3 text-base leading-relaxed text-slate-700">
-				Editorial artwork and visual essays that translate data into accessible narratives.
-			</p>
-		</article>
-		<article class="rounded-lg bg-white/70 p-6 shadow-sm">
-			<h3 class="text-xl font-semibold text-slate-900">Installation</h3>
-			<p class="mt-3 text-base leading-relaxed text-slate-700">
-				Immersive experiences that invite policy makers and the public to imagine regenerative futures together.
-			</p>
-		</article>
-		<article class="rounded-lg bg-white/70 p-6 shadow-sm">
-			<h3 class="text-xl font-semibold text-slate-900">Story development</h3>
-			<p class="mt-3 text-base leading-relaxed text-slate-700">
-				Narrative consulting for film, podcasts, and exhibits to ensure climate science is compelling and accurate.
-			</p>
-		</article>
-	</section>
+<BaseLayout lang={lang} title="Creative Projects" description={entry.data.description} alternates={alternates}>
+	<article class="prose">
+		<Content />
+	</article>
 </BaseLayout>
