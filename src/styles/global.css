@@ -72,28 +72,6 @@ button, a[class*="group"], .btn {
 	margin-bottom: 1rem;
 }
 
-.prose ul, .prose ol {
-	margin-bottom: 1rem;
-	padding-left: 1.5rem;
-	color: rgb(51 65 85);
-}
-
-.prose li {
-	margin-bottom: 0.5rem;
-	line-height: 1.75;
-}
-
-.prose strong {
-	font-weight: 700;
-	color: rgb(15 23 42);
-}
-
-.prose hr {
-	margin: 2rem 0;
-	border: none;
-	border-top: 1px solid rgb(226 232 240);
-}
-
 .prose section {
 	margin-bottom: 2rem;
 }
