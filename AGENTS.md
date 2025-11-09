@@ -30,13 +30,12 @@ References:
 ---
 
 ## 3) i18n strategy (routing & content)
-- **Folder‑per‑locale** routing:
-  - `src/pages/en/*` → `/en/...`
-  - `src/pages/de/*` → `/de/...`
+- **Dynamic routing:** Single `[locale]/[...slug].astro` file handles all pages for both locales (eliminates per-page duplication).
 - **Localized content** with Content Collections (frontmatter includes `locale: 'en' | 'de'`).
-- **Language switcher**: URL segment swap (`/en/...` ↔ `/de/...`).
+- **Language switcher**: URL segment swap (`/en/...` ↔ `/de/...`), located in sticky header.
 - **HTML lang**: set per page from current route.
-- Optional: If we later want automatic route generation/fallbacks, adopt Astro’s i18n config (`astro.config.* -> i18n.locales/defaultLocale`). [1](https://docs.astro.build/en/guides/internationalization/)
+- **Build-time validation:** `scripts/check-i18n-pages.mjs` ensures every page exists in both EN/DE (fails build if missing translation).
+- Optional: If we later want automatic route generation/fallbacks, adopt Astro's i18n config (`astro.config.* -> i18n.locales/defaultLocale`). [1](https://docs.astro.build/en/guides/internationalization/)
 
 **Out of scope for now:** domain‑per‑locale, auto‑redirect by `Accept-Language`.
 
