@@ -1,0 +1,38 @@
+---
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export const getStaticPaths = (async () => {
+	const allPages = await getCollection('pages', ({ id }) => id.startsWith('en/'));
+
+	return allPages.map(entry => {
+		// Get the page name without the 'en/' prefix
+		const pageName = entry.id.replace('en/', '').replace('.md', '');
+		// For index, use undefined (becomes /en/), for others use the page name
+		const slug = pageName === 'index' ? undefined : pageName;
+
+		return {
+			params: { slug },
+			props: { entry },
+		};
+	});
+}) satisfies GetStaticPaths;
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+const lang = 'en';
+const currentPath = Astro.url.pathname;
+// Generate alternate DE path by replacing /en/ with /de/
+const dePath = currentPath.replace(/^\/en\//, '/de/');
+
+const alternates = {
+	de: dePath,
+};
+---
+<BaseLayout lang={lang} title={entry.data.title} description={entry.data.description} alternates={alternates}>
+	<article class="prose">
+		<Content />
+	</article>
+</BaseLayout>
