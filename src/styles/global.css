@@ -42,16 +42,6 @@ main {
 	}
 }
 
-/* Override serif font for buttons and interactive elements */
-button, a[class*="group"], .btn {
-	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-	font-weight: 700 !important;
-	line-height: 1 !important;
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-}
-
 /* Prose styling for Markdown content */
 .prose {
 	max-width: none;
@@ -91,7 +81,10 @@ button, a[class*="group"], .btn {
 /* ============================================
    BUTTON STYLES - Reusable button components
    ============================================ */
-.btn-primary {
+
+/* Shared button base styles */
+.btn-primary,
+.btn-secondary {
 	position: relative;
 	display: inline-flex;
 	align-items: center;
@@ -99,7 +92,6 @@ button, a[class*="group"], .btn {
 	gap: 0.75rem;
 	overflow: hidden;
 	border-radius: 1rem;
-	background: linear-gradient(to right, var(--color-highlight), var(--color-highlight-dark));
 	padding: 1.25rem 2rem;
 	font-size: 1rem;
 	font-weight: 700;
@@ -109,20 +101,32 @@ button, a[class*="group"], .btn {
 	text-decoration: none;
 }
 
-.btn-primary:hover {
+.btn-primary::before,
+.btn-secondary::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	transition: transform 0.3s;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
 	box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 	transform: scale(1.05);
 }
 
-.btn-primary:focus {
+.btn-primary:focus,
+.btn-secondary:focus {
 	outline: none;
 	box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-highlight) 50%, transparent);
 }
 
+/* Primary button specific styles */
+.btn-primary {
+	background: linear-gradient(to right, var(--color-highlight), var(--color-highlight-dark));
+}
+
 .btn-primary::before {
-	content: '';
-	position: absolute;
-	inset: 0;
 	background-color: color-mix(in srgb, var(--color-white) 20%, transparent);
 	transform: translateX(-100%);
 	transition: transform 0.5s;
@@ -132,44 +136,20 @@ button, a[class*="group"], .btn {
 	transform: translateX(100%);
 }
 
+/* Secondary button specific styles */
 .btn-secondary {
-	position: relative;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	gap: 0.75rem;
-	overflow: hidden;
-	border-radius: 1rem;
 	background-color: color-mix(in srgb, var(--color-white) 90%, transparent);
 	backdrop-filter: blur(4px);
 	border: 1px solid color-mix(in srgb, var(--color-highlight) 30%, transparent);
-	padding: 1.25rem 2rem;
-	font-size: 1rem;
-	font-weight: 700;
-	color: var(--color-text-dark);
-	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-	transition: all 0.3s;
-	text-decoration: none;
+}
+
+.btn-secondary::before {
+	background: linear-gradient(to right, var(--color-highlight), var(--color-highlight-dark));
+	transform: translateY(100%);
 }
 
 .btn-secondary:hover {
 	background-color: var(--color-highlight);
-	box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-	transform: scale(1.05);
-}
-
-.btn-secondary:focus {
-	outline: none;
-	box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-highlight) 50%, transparent);
-}
-
-.btn-secondary::before {
-	content: '';
-	position: absolute;
-	inset: 0;
-	background: linear-gradient(to right, var(--color-highlight), var(--color-highlight-dark));
-	transform: translateY(100%);
-	transition: transform 0.3s;
 }
 
 .btn-secondary:hover::before {

@@ -16,6 +16,7 @@ interface Props {
 const siteName = "Julia's Portfolio";
 const { lang, title, description, alternates = {} }: Props = Astro.props;
 const pageTitle = title ? `${title} · ${siteName}` : siteName;
+
 const localeNav = {
 	en: [
 		{ href: '/en/', label: 'Home' },
@@ -34,20 +35,15 @@ const localeNav = {
 } as const;
 
 const navItems = localeNav[lang];
-const alternatesWithDefaults: AlternateLinks = {
-	en: '/en/',
-	de: '/de/',
-	...alternates,
-};
 const otherLocale = lang === 'en' ? 'de' : 'en';
-const urlFromAlternate = alternatesWithDefaults[otherLocale as keyof AlternateLinks];
-const switchHref =
-	typeof urlFromAlternate === 'string'
-		? urlFromAlternate
-		: otherLocale === 'en'
-		? '/en/'
-		: '/de/';
+const switchHref = alternates[otherLocale] ?? `/${otherLocale}/`;
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
+
+// Build hreflang alternates
+const hreflangAlternates = {
+	en: alternates.en ?? '/en/',
+	de: alternates.de ?? '/de/',
+};
 ---
 <!DOCTYPE html>
 <html lang={lang} class="min-h-full">
@@ -58,8 +54,8 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString(
 		<title>{pageTitle}</title>
 		{canonical && <link rel="canonical" href={canonical} />}
 		{description && <meta name="description" content={description} />}
-		{Object.entries(alternatesWithDefaults).map(([locale, href]) => (
-			<link rel="alternate" hreflang={locale} href={href ?? '#'} />
+		{Object.entries(hreflangAlternates).map(([locale, href]) => (
+			<link rel="alternate" hreflang={locale} href={href} />
 		))}
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	</head>
