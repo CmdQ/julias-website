@@ -1,23 +1,9 @@
 ---
 title: "Project Futopia"
-description: "Project Futopia helps learners imagine equitable climate futures through hands-on storytelling."
+description: "Placeholder"
 ---
 
-## Project Futopia
-
-Project Futopia is a collaborative studio where students, educators, and communities visualize just climate futures. Through speculative design, collective storytelling, and research-backed facilitation, participants build narratives that inspire practical action.
-
-### Workshops
-
-Custom workshops guide teams through systems mapping, persona development, and visual storytelling to articulate climate-positive strategies.
-
-### Studio Residencies
-
-Longer engagements embed the Futopia methodology within your organization, culminating in public showcases or toolkits for ongoing use.
-
----
-
-## Project Details
+Placeholder
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
