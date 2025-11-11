@@ -16,7 +16,6 @@ Ich lade dich ein, den Blick stattdessen nach vorne zu richten und Ziele zu iden
 Du kannst dir so eine Welt noch nicht vorstellen? Das ist nicht dein persönliches Defizit und du bist damit bist nicht allein.  Und genau hier setzt Project Futopia an.
 
 
-
 ### Was Dich erwartet
 
 Project Futopia ist dein Fitnessstudio für Vorstellungskraft. Wir zeigen, warum Hoffnung und positive Zukunftsbilder gerade in schwierigen Zeiten unverzichtbar sind und wie sie gut mit Klimatrauer und Sorge koexistieren können. Du lernst, „aktive Hoffnung“ bewusst zu praktizieren und als Werkzeug für wirksames Handeln zu nutzen.
@@ -26,6 +25,11 @@ Schritt für Schritt verlässt du die klimadystopische Komfortzone und setzt die
 Eine einzigartige Kombination aus spielerischen, künstlerischen und kontemplativen Methoden
 hilft dir dabei dir die Welt in der du leben möchtest mit allen Sinnen und auf verschiedenen Ebenen vorstellen zu können. Dieses Bild wird zu deinem Kompass – für konkrete nächste Schritte in Richtung deiner Futopia.
 
+![Julia Salomon gibt einen Vortrag an der SFU](../../../../public/images/futopia-vortrag.jpg)
+![Teilnehmende schätzen die Zukunft ein](../../../../public/images/futopia-linie.jpg)
+![Teilnehmende bauen mit Lego](../../../../public/images/futopia-lego.jpg)
+![Teilnehmende kombinieren Lego-Projekte](../../../../public/images/futopia-lego-gruppe.jpg)
+![Teilnehmende spielen Daybreak](../../../../public/images/futopia-spiel.jpg)
 
 ### Formate
 
@@ -47,4 +51,3 @@ Im Masterstudium Communication for Social Change (Simon Fraser University) habe 
 Du möchtest eure Zukunftsvision schärfen und ins Handeln kommen? Schreib mir – wir entwickeln das Format, das zu euch passt.
 
 ### Testimonials
-
