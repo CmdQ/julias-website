@@ -20,17 +20,19 @@ const pageTitle = title ? `${title} · ${siteName}` : siteName;
 const localeNav = {
 	en: [
 		{ href: '/en/', label: 'Home' },
+		{ href: '/en/about-me/', label: 'About me' },
+		{ href: '/en/contact/', label: 'Contact' },
 		{ href: '/en/project-futopia/', label: 'Project Futopia' },
 		{ href: '/en/climate-education/', label: 'Climate Education' },
 		{ href: '/en/creative-projects/', label: 'Creative Projects' },
-		{ href: '/en/contact/', label: 'Contact' },
 	],
 	de: [
-		{ href: '/de/', label: 'Startseite' },
-		{ href: '/de/project-futopia/', label: 'Projekt Futopia' },
-		{ href: '/de/climate-education/', label: 'Klimabildung' },
-		{ href: '/de/creative-projects/', label: 'Kreative Projekte' },
+		{ href: '/de/', label: 'Home' },
+		{ href: '/de/about-me/', label: 'About me' },
 		{ href: '/de/contact/', label: 'Kontakt' },
+		{ href: '/de/project-futopia/', label: 'Projekt Futopia' },
+		{ href: '/de/climate-education/', label: 'Climate Education' },
+		{ href: '/de/creative-projects/', label: 'Kreative Projekte' },
 	],
 } as const;
 
@@ -61,9 +63,6 @@ const hreflangAlternates = {
 	</head>
 	<body class="min-h-screen" style="background-color: black;">
 		<div class="mx-auto max-w-5xl" style="background-color: var(--color-bg-cream);">
-		<a href="#main-content" class="absolute left-4 top-4 z-50 inline-flex -translate-y-full rounded px-4 py-2 text-sm font-semibold shadow focus:translate-y-0 focus:outline-none focus:ring" style="background-color: var(--color-white); color: var(--color-text-dark); --tw-ring-color: var(--color-highlight);">
-			Skip to content
-		</a>
 
 		<!-- Hero Image - scrolls away -->
 		<div class="relative w-full overflow-hidden">
@@ -81,7 +80,7 @@ const hreflangAlternates = {
 					<p class="text-sm uppercase tracking-[0.2em] font-bold" style="color: var(--color-text-dark); opacity: 0.7;">{lang === 'en' ? "Educator & Artist" : 'Pädagogin & Künstlerin'}</p>
 					<h1 class="m-0 text-4xl font-black drop-shadow-sm" style="color: var(--color-text-dark);">Julia Salomon</h1>
 				</div>
-				<nav aria-label={lang === 'en' ? 'Primary' : 'Hauptnavigation'} class="grid gap-3 text-base sm:grid-cols-5 sm:gap-4">
+				<nav aria-label={lang === 'en' ? 'Primary' : 'Hauptnavigation'} class="grid grid-cols-2 gap-3 text-base sm:grid-cols-3 sm:gap-4">
 					{navItems.map((item) => (
 						<a
 							class="group rounded-xl px-4 py-3 text-center font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 border backdrop-blur-sm"
