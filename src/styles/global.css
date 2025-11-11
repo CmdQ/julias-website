@@ -16,7 +16,7 @@ body {
 	background-color: var(--color-bg-cream);
 	color: var(--color-text-dark);
 	margin: 0;
-	font-family: "Source Serif Pro", ui-serif, Georgia, serif;
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 	scroll-behavior: smooth;
 }
 
