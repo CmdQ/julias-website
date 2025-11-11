@@ -46,6 +46,19 @@ main {
 /* Prose styling - using @tailwindcss/typography with custom color overrides */
 /* Most styling is handled by Tailwind Typography plugin in the template */
 
+/* Reduce gap between blockquote and attribution text */
+.prose blockquote {
+	margin-bottom: 0.25rem;
+}
+
+.prose blockquote p {
+	margin-bottom: 0;
+}
+
+.prose blockquote + p {
+	margin-top: 0;
+}
+
 /* ============================================
    BUTTON STYLES - Reusable button components
    ============================================ */

@@ -7,7 +7,9 @@ description: "Projekt Futopia eröffnet Räume, in denen Lernende gerechte Klima
 
 > Imagination is more important than knowledge. For knowledge is limited to all
 we now know and understand, while imagination embraces the entire world, and
-all there ever will be to know and understand. (Albert Einstein)
+all there ever will be to know and understand.
+
+— Albert Einstein
 
 Hast du schon einmal versucht, einen Ball zu werfen, während du in die entgegengesetzte Richtung schaust? Wenn nicht, keine Sorge – du hast nicht viel verpasst. Das Problem: Genau so kommunizieren wir oft über den Klimawandel. Wir reden über Verzicht, Verbote und Katastrophen. Diese Perspektive hat ihren Platz – aber sie allein motiviert selten zum Handeln.
 

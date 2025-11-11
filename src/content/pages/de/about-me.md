@@ -3,7 +3,7 @@ title: "Über mich"
 description: "Platzhalter"
 ---
 
-> „Es gibt kein größeres Glück auf Erden als lieben und geliebt zu werden."
+> Es gibt kein größeres Glück auf Erden als lieben und geliebt zu werden.
 
 Diesen Satz hat meine Omi mir, als ich ein kleines Kind war, in mein Freundschaftsalbum geschrieben. Er prägt bis heute, wie ich über die Welt denke und was ich in sie einbringen möchte.
 
