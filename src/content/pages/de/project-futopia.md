@@ -28,11 +28,11 @@ Eine einzigartige Kombination aus spielerischen, künstlerischen und kontemplati
 hilft dir dabei dir die Welt in der du leben möchtest mit allen Sinnen und auf verschiedenen Ebenen vorstellen zu können. Dieses Bild wird zu deinem Kompass – für konkrete nächste Schritte in Richtung deiner Futopia.
 
 <div class="photo-gallery">
-  <img src="/images/futopia-vortrag.jpg" alt="Julia Salomon gibt einen Vortrag an der SFU">
-  <img src="/images/futopia-linie.jpg" alt="Teilnehmende schätzen die Zukunft ein">
-  <img src="/images/futopia-lego.jpg" alt="Teilnehmende bauen mit Lego">
-  <img src="/images/futopia-lego-gruppe.jpg" alt="Teilnehmende kombinieren Lego-Projekte">
-  <img src="/images/futopia-spiel.jpg" alt="Teilnehmende spielen Daybreak">
+  <img src="/images/futopia/vortrag.jpg" alt="Julia Salomon gibt einen Vortrag an der SFU">
+  <img src="/images/futopia/linie.jpg" alt="Teilnehmende schätzen die Zukunft ein">
+  <img src="/images/futopia/lego.jpg" alt="Teilnehmende bauen mit Lego">
+  <img src="/images/futopia/lego-gruppe.jpg" alt="Teilnehmende kombinieren Lego-Projekte">
+  <img src="/images/futopia/spiel.jpg" alt="Teilnehmende spielen Daybreak">
 </div>
 
 ### Formate

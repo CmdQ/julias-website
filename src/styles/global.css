@@ -17,7 +17,6 @@ body {
 	background-color: var(--color-bg-cream);
 	color: var(--color-text-dark);
 	margin: 0;
-	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 	scroll-behavior: smooth;
 }
 
@@ -79,12 +78,10 @@ main {
 	object-fit: cover;
 	border-radius: 0.5rem;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
-	cursor: pointer;
 }
 
 .photo-gallery img:hover {
 	transform: scale(1.618);
-	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* ============================================
