@@ -35,6 +35,7 @@ References:
 - **Language switcher**: URL segment swap (`/en/...` ↔ `/de/...`), located in sticky header.
 - **HTML lang**: set per page from current route.
 - **Build-time validation:** `scripts/check-i18n-pages.mjs` ensures every page exists in both EN/DE (fails build if missing translation).
+  - **IMPORTANT:** Always use **identical filenames** across locales (e.g., `privacy.md` in both `/en/` and `/de/`). The validation script compares filenames, not content or titles. Different filenames will break the build.
 - Optional: If we later want automatic route generation/fallbacks, adopt Astro's i18n config (`astro.config.* -> i18n.locales/defaultLocale`). [1](https://docs.astro.build/en/guides/internationalization/)
 
 **Out of scope for now:** domain‑per‑locale, auto‑redirect by `Accept-Language`.
