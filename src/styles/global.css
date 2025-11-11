@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* ============================================
    COLOR PALETTE - All colors in one place
@@ -42,62 +43,8 @@ main {
 	}
 }
 
-/* Prose styling for Markdown content */
-.prose {
-	max-width: none;
-}
-
-.prose h2 {
-	font-size: 1.875rem;
-	font-weight: 700;
-	color: var(--color-text-dark);
-	margin-bottom: 1rem;
-	margin-top: 2rem;
-}
-
-.prose h2:first-child {
-	margin-top: 0;
-}
-
-.prose h3 {
-	font-size: 1.25rem;
-	font-weight: 600;
-	color: var(--color-text-dark);
-	margin-bottom: 0.75rem;
-	margin-top: 1.5rem;
-}
-
-.prose p {
-	font-size: 1.125rem;
-	line-height: 1.75;
-	color: var(--color-text-muted);
-	margin-bottom: 1rem;
-}
-
-.prose ul,
-.prose ol {
-	font-size: 1.125rem;
-	line-height: 1.75;
-	color: var(--color-text-muted);
-	margin-bottom: 1rem;
-	padding-left: 1.5rem;
-}
-
-.prose ul {
-	list-style-type: disc;
-}
-
-.prose ol {
-	list-style-type: decimal;
-}
-
-.prose li {
-	margin-bottom: 0.5rem;
-}
-
-.prose section {
-	margin-bottom: 2rem;
-}
+/* Prose styling - using @tailwindcss/typography with custom color overrides */
+/* Most styling is handled by Tailwind Typography plugin in the template */
 
 /* ============================================
    BUTTON STYLES - Reusable button components
