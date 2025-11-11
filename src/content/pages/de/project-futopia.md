@@ -48,7 +48,7 @@ Ich bringe langjährige Erfahrung aus der Klimabewegung bei Greenpeace, fundiert
 Im Masterstudium Communication for Social Change (Simon Fraser University) habe ich Project Futopia entwickelt. Auf Basis aktueller Studien aus Klimakommunikation, Psychologie und Active Participatory Futuring ist ein neuartiges, wirksames Format mit kreativen und kontemplativen Methoden entstanden.
 
 - Mehr zum wissenschaftlichen Hintergrund: meine Masterarbeit (Link).
-- Mehr über mich und meinen Weg in der Klimabewegung: Profil/Über mich (Link).
+- Mehr über mich und meinen Weg in der Klimabewegung [hier](../about-me).
 
 ### Lass uns starten
 
