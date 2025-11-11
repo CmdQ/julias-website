@@ -59,6 +59,12 @@ main {
 	margin-top: 0;
 }
 
+/* Make bullet points and list markers more visible */
+.prose ul > li::marker,
+.prose ol > li::marker {
+	color: var(--color-text-dark);
+}
+
 /* ============================================
    BUTTON STYLES - Reusable button components
    ============================================ */
