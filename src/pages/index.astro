@@ -1,7 +1,5 @@
 ---
 export const prerender = true;
 
-const base = import.meta.env.BASE_URL;
-const redirect = base.endsWith('/') ? `${base}en/` : `${base}/en/`;
-return Astro.redirect(redirect);
+return Astro.redirect(`${import.meta.env.BASE_URL}/en/`);
 ---
