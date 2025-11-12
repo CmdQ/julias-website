@@ -8,7 +8,7 @@ export default defineConfig({
 	base: '/julias-website',
 	i18n: {
 		locales: ['en', 'de'],
-		defaultLocale: 'en',
+		defaultLocale: 'de',
 	},
 	vite: {
 		plugins: [tailwind()],
