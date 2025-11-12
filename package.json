@@ -15,6 +15,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.16",
-    "tailwindcss": "^4.1.16"
+    "tailwindcss": "^4.1.16",
+    "unist-util-visit": "^5.0.0"
   }
 }

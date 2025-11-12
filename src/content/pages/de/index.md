@@ -15,9 +15,9 @@ Seit meinem 18.&nbsp;Lebensjahr engagiere ich mich bei Greenpeace und verbinde p
 
 ### Was ich mache:
 
-Als **Workshop-Facilitatorin und Public Speakerin** lade ich im Rahmen meiner Workshop-Reihe Project Futopia dazu ein, gemeinsam unsere "Imagination Muscles" zu trainieren – für eine nachhaltige Zukunft, auf die wir richtig Lust haben.
+Als **Workshop-Facilitatorin und Public Speakerin** lade ich im Rahmen meiner Workshop-Reihe [Project Futopia](./project-futopia) dazu ein, gemeinsam unsere "Imagination Muscles" zu trainieren – für eine nachhaltige Zukunft, auf die wir richtig Lust haben.
 
-Als **freiberufliche Trainerin und E-Learning-Gestalterin** helfe ich Organisationen dabei, Lerninhalte spannend und inspirierend zu vermitteln und Teilnehmer:innen mit klaren Handlungsimpulsen weiterzuführen.
+Als **freiberufliche Trainerin und E-Learning-Gestalterin** [helfe ich Organisationen dabei](./climate-education), Lerninhalte spannend und inspirierend zu vermitteln und Teilnehmer:innen mit klaren Handlungsimpulsen weiterzuführen.
 
 Als **Autorin** schreibe ich voller Hingabe an einem Solarpunk-inspirierten polyamoren Climate-Fiction-Roman; weil wir mehr Geschichten über die Zukunft brauchen, in der wir leben wollen.
 

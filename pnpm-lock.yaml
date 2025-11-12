@@ -21,6 +21,9 @@ importers:
       tailwindcss:
         specifier: ^4.1.16
         version: 4.1.16
+      unist-util-visit:
+        specifier: ^5.0.0
+        version: 5.0.0
 
 packages:
 
