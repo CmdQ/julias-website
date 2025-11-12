@@ -31,7 +31,8 @@ const lang = Astro.params.locale as 'en' | 'de';
 const currentPath = Astro.url.pathname;
 // Generate alternate path by swapping the locale
 const otherLocale = lang === 'en' ? 'de' : 'en';
-const alternatePath = currentPath.replace(`/${lang}/`, `/${otherLocale}/`);
+const base = import.meta.env.BASE_URL;
+const alternatePath = currentPath.replace(`${base}${lang}/`, `${base}${otherLocale}/`);
 
 const alternates = {
 	[otherLocale]: alternatePath,

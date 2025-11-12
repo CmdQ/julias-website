@@ -17,35 +17,36 @@ const siteName = "Julia's Portfolio";
 const { lang, title, description, alternates = {} }: Props = Astro.props;
 const pageTitle = title ? `${title} · ${siteName}` : siteName;
 
+const base = import.meta.env.BASE_URL;
 const localeNav = {
 	en: [
-		{ href: '/en/', label: 'Home' },
-		{ href: '/en/about-me/', label: 'About me' },
-		{ href: '/en/contact/', label: 'Contact' },
-		{ href: '/en/project-futopia/', label: 'Project Futopia' },
-		{ href: '/en/climate-education/', label: 'Climate Education' },
-		{ href: '/en/creative-projects/', label: 'Creative Projects' },
+		{ href: `${base}en/`, label: 'Home' },
+		{ href: `${base}en/about-me/`, label: 'About me' },
+		{ href: `${base}en/contact/`, label: 'Contact' },
+		{ href: `${base}en/project-futopia/`, label: 'Project Futopia' },
+		{ href: `${base}en/climate-education/`, label: 'Climate Education' },
+		{ href: `${base}en/creative-projects/`, label: 'Creative Projects' },
 	],
 	de: [
-		{ href: '/de/', label: 'Home' },
-		{ href: '/de/about-me/', label: 'About me' },
-		{ href: '/de/contact/', label: 'Kontakt' },
-		{ href: '/de/project-futopia/', label: 'Projekt Futopia' },
-		{ href: '/de/climate-education/', label: 'Climate Education' },
-		{ href: '/de/creative-projects/', label: 'Kreative Projekte' },
+		{ href: `${base}de/`, label: 'Home' },
+		{ href: `${base}de/about-me/`, label: 'About me' },
+		{ href: `${base}de/contact/`, label: 'Kontakt' },
+		{ href: `${base}de/project-futopia/`, label: 'Projekt Futopia' },
+		{ href: `${base}de/climate-education/`, label: 'Climate Education' },
+		{ href: `${base}de/creative-projects/`, label: 'Kreative Projekte' },
 	],
 } as const;
 
 const navItems = localeNav[lang];
 const otherLocale = lang === 'en' ? 'de' : 'en';
-const switchHref = alternates[otherLocale] ?? `/${otherLocale}/`;
+const switchHref = alternates[otherLocale] ?? `${base}${otherLocale}/`;
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
 const currentPath = Astro.url.pathname;
 
 // Build hreflang alternates
 const hreflangAlternates = {
-	en: alternates.en ?? '/en/',
-	de: alternates.de ?? '/de/',
+	en: alternates.en ?? `${base}en/`,
+	de: alternates.de ?? `${base}de/`,
 };
 ---
 <!DOCTYPE html>
@@ -60,7 +61,7 @@ const hreflangAlternates = {
 		{Object.entries(hreflangAlternates).map(([locale, href]) => (
 			<link rel="alternate" hreflang={locale} href={href} />
 		))}
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
 	</head>
 	<body class="min-h-screen" style="background-color: rgb(10, 24, 34);">
 		<div class="mx-auto max-w-5xl" style="background-color: var(--color-bg-cream);">
@@ -106,9 +107,9 @@ const hreflangAlternates = {
 			<div class="flex w-full flex-col gap-4 px-6 py-8 sm:flex-row sm:items-center sm:justify-between">
 				<p class="m-0 text-sm" style="color: var(--color-text-dark); opacity: 0.7;">© {new Date().getFullYear()} Julia Salomon</p>
 				<div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
-					<a class="text-sm font-semibold hover:underline" style="color: var(--color-text-dark);" href={lang === 'en' ? '/en/privacy/' : '/de/privacy/'}>
-						{lang === 'en' ? 'Privacy Notice' : 'Datenschutz'}
-					</a>
+				<a class="text-sm font-semibold hover:underline" style="color: var(--color-text-dark);" href={lang === 'en' ? `${base}en/privacy/` : `${base}de/privacy/`}>
+					{lang === 'en' ? 'Privacy Notice' : 'Datenschutz'}
+				</a>
 					<a class="inline-flex items-center gap-2 text-sm font-semibold" style="color: var(--color-text-dark);" href={switchHref}>
 						<span aria-hidden="true">🌐</span>
 						{lang === 'en' ? 'Deutsch' : 'English'}
