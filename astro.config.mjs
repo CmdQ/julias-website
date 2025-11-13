@@ -5,15 +5,15 @@ import { remarkLocaleLinks } from './src/plugins/remark-locale-links.mjs';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://cmdq.github.io',
-	base: '/julias-website',
+	site: 'https://julia-salomon.de',
+	base: '/',
 	i18n: {
 		locales: ['en', 'de'],
 		defaultLocale: 'de',
 	},
 	markdown: {
 		remarkPlugins: [
-			[remarkLocaleLinks, { base: '/julias-website' }]
+			[remarkLocaleLinks, { base: '' }]
 		],
 	},
 	vite: {
