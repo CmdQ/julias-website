@@ -10,7 +10,7 @@
     "check:i18n": "node scripts/check-i18n-pages.mjs"
   },
   "dependencies": {
-    "astro": "^5.15.1"
+    "astro": "^5.15.9"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
