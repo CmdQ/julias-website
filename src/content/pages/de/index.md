@@ -3,7 +3,8 @@ title: "Startseite"
 description: "Pädagogin und Künstlerin Julia Salomon verbindet Klimabildung mit kreativen Lernformaten."
 ---
 
-## Gemeinsam Zukunft gestalten
+## Nur was wir uns vorstellen- können wir gestalten
+
 
 Ich bin Julia Salomon, Trainerin für positive Zukunftsvisionen, E-Learning-Entwicklerin, Klimaaktivistin und Geschichtenerzählerin.
 
@@ -17,9 +18,8 @@ Seit meinem 18.&nbsp;Lebensjahr engagiere ich mich bei Greenpeace und verbinde p
 
 Als **Workshop-Facilitatorin und Public Speakerin** lade ich im Rahmen meiner Workshop-Reihe [Project Futopia](./project-futopia) dazu ein, gemeinsam unsere "Imagination Muscles" zu trainieren – für eine nachhaltige Zukunft, auf die wir richtig Lust haben.
 
-Als **freiberufliche Trainerin und E-Learning-Gestalterin** [helfe ich Organisationen dabei](./climate-education), Lerninhalte spannend und inspirierend zu vermitteln und Teilnehmer:innen mit klaren Handlungsimpulsen weiterzuführen.
+Als **freiberufliche Trainerin und E-Learning-Entwicklerin** helfe ich Organisationen dabei, Lerninhalte spannend und inspirierend zu vermitteln und Teilnehmende mit klaren Handlungsimpulsen weiterzuführen.
 
-Als **Autorin** schreibe ich voller Hingabe an einem Solarpunk-inspirierten polyamoren Climate-Fiction-Roman; weil wir mehr Geschichten über die Zukunft brauchen, in der wir leben wollen.
+Als **Autorin** schreibe ich voller Hingabe an einem Solarpunk-inspirierten polyamoren Climate-Fiction-Roman; weil wir mehr spannende Geschichten über die Zukunft brauchen, in der wir leben wollen.
 
-Wenn ich nicht am Schreibtisch sitze, findest du mich beim Häkeln, Malen oder Tanzen (Swing & Salsa), am liebsten zwischen großen Farnen im Stanley Park oder mit der Sonne im Gesicht am Wreck Beach.
-
+Wenn ich nicht am Schreibtisch sitze, findest du mich beim Häkeln, Malen oder Tanzen (Swing & Salsa), am liebsten zwischen großen Farnen im Stanley Park oder mit der Sonne im Gesicht am Wreck Beach in meinem geliebten Vancouver.

@@ -3,18 +3,27 @@ title: "Kreative Praxis"
 description: "Kollaborative Kunst- und Medienprojekte, die komplexe Inhalte in menschliche Geschichten übersetzen."
 ---
 
-## Kreative Praxis
+## Mein Debütroman
 
-Ob illustrierte Essays oder interaktive Installationen – meine Arbeiten schaffen emotionale Zugänge zu Klimazukünften. Jedes Projekt basiert auf Recherche und entsteht gemeinsam mit den Communities, für die es gedacht ist.
+Aktuell schreibe ich an einem Solarpunk-inspirierten Climate-Fiction-Roman, in dem sich eine polyamore Liebesgeschichte entfaltet. Der Roman spielt auf zwei Zeitebenen: Vancouver im Jahr 2025 und Italien im Jahr 2075.
 
-### Illustration
+Die Erzählung begleitet mehrere junge Menschen in Vancouver, die sich auf unterschiedlichste Weisen für eine bessere Welt einsetzen, sowie ihre komplexen Beziehungsdynamiken zueinander.
+Immer wieder beschäftigt sich die Geschichte mit der Frage, wie wir widerstandsfähige Bindungen zu den Menschen um uns herum aufbauen können – verwurzelt in tiefer Liebe und Fürsorge, die uns in einer zunehmend harschen Umwelt Halt und Kraft geben.
+Durch die Verwebung mit der Zeitebene der Zukunft erforscht der Roman, wie unsere heutigen Handlungen die Welt nachhaltig verändern können und wie unsere Kinder und Enkelkinder davon beeinflusst werden.
 
-Editorial-Arbeiten und visuelle Essays, die Daten zugänglich machen.
+### Schreibe mir!
 
-### Installation
+Du trägst eine Vision für eine positive Zukunft in dir, von der du möchtest, dass sie mehr Menschen inspiriert? Oder arbeitest sogar an einem Projekt dazu? Teile deine Idee mit mir – und ich versuche, einen Platz für sie in meiner Solarpunk-Romanwelt zu finden.
 
-Immersive Erfahrungen, die Politik und Öffentlichkeit zum gemeinsamen Imaginieren regenerativer Zukünfte einladen.
+## Meine Illustrationen
 
-### Story-Entwicklung
+Eine große Leidenschaft von mir ist es die Dinge, die sich in Fotos schwer darstellen lassen durch meine Illustrationen zu verbildlichen und so komplexe Themen greifbarer zu machen.
 
-Narrative Beratung für Film, Podcasts und Ausstellungen – fundiert, empathisch, wirkungsvoll.
+Hier siehst du eine kleine Auswahl von Illustrationen, die ich für Greenpeace Deutschland angefertigt habe.
+<div class="photo-gallery">
+  <img src="/images/creative/alchemie.jpg" alt="illustration von händen mit einer glitzernden spirale">
+  <img src="/images/creative/gefuehle.jpg" alt="illustration eines menschlichen herzens mit megaphon">
+  <img src="/images/creative/politisch.jpg" alt="illustration: eine demo zur agrarwende">
+  <img src="/images/creative/kompass.jpg" alt="illustration: kompass mit wahl und friedenstaube">
+  <img src="/images/creative/rollen.jpg" alt="Illustration: Verschiedene Charaktere">
+</div>

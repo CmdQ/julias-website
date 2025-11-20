@@ -5,8 +5,6 @@ description: "Kontaktieren Sie Julia Salomon für Kooperationen, Vorträge oder 
 
 ## Zusammenarbeit anfragen
 
-Ich arbeite mit Bildungseinrichtungen, Museen, NGOs und kreativen Studios weltweit. Teilen Sie ein paar Eckdaten – ich melde mich innerhalb weniger Tage.
+Ich arbeite mit Bildungseinrichtungen, Museen, NGOs und kreativen Studios weltweit. Teile ein paar Eckdaten und ich melde mich innerhalb weniger Tage bei dir.
 
-**E-Mail:** info@julia-salomon.de
-
-**Verfügbarkeit:** Aktuell Termine für virtuelle und Präsenzformate in Q1–Q3 2026.
+**E-Mail:** ju.salomon@gmx.de
