@@ -22,9 +22,9 @@ Eine große Leidenschaft von mir ist es die Dinge, die sich in Fotos schwer dars
 Hier siehst du eine kleine Auswahl von Illustrationen, die ich für Greenpeace Deutschland angefertigt habe.
 
 <div class="photo-gallery-full">
+  <img src="/images/creative/gefuehle.jpg" alt="Illustration eines menschlichen Herzens mit Megaphon">
+  <img src="/images/creative/politisch.jpg" alt="Illustration: eine Demo zur Agrarwende">
   <img src="/images/creative/rollen.jpg" alt="Illustration: verschiedene Charaktere">
-  <img src="/images/creative/gefuehle.jpg" alt="Illustration eines menschlichen herzens mit megaphon">
-  <img src="/images/creative/politisch.jpg" alt="Illustration: eine demo zur agrarwende">
-  <img src="/images/creative/alchemie.jpg" alt="Illustration von händen mit einer glitzernden spirale">
-  <img src="/images/creative/kompass.jpg" alt="Illustration: kompass mit wahl und friedenstaube">
+  <img src="/images/creative/alchemie.jpg" alt="Illustration von Händen mit einer glitzernden Sppirale">
+  <img src="/images/creative/kompass.jpg" alt="Illustration: Kompass mit Wal und Friedenstaube">
 </div>

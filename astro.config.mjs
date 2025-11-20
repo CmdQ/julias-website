@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@tailwindcss/vite';
 import { remarkLocaleLinks } from './src/plugins/remark-locale-links.mjs';
+import { remarkLightboxGallery } from './src/plugins/remark-lightbox-gallery.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,7 +14,8 @@ export default defineConfig({
 	},
 	markdown: {
 		remarkPlugins: [
-			[remarkLocaleLinks, { base: '' }]
+			[remarkLocaleLinks, { base: '' }],
+			remarkLightboxGallery
 		],
 	},
 	vite: {
