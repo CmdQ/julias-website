@@ -17,7 +17,7 @@ Ich lade dich ein, den Blick stattdessen nach vorne zu richten und Ziele zu iden
 
 Du kannst dir so eine Welt noch nicht vorstellen? Das ist nicht dein persönliches Defizit und du bist damit nicht allein. Und genau hier setzt Project Futopia an.
 
-<img src="/images/futopia/vortrag/Imagination.jpg" alt="Illustration einer Frau mit geschlossenen Augen sie stellt sich eine bessere Welt vor.">
+![Illustration einer Frau mit geschlossenen Augen sie stellt sich eine bessere Welt vor.](/images/futopia/imagination.jpg)
 
 ### Was Dich erwartet
 
