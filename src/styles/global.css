@@ -84,6 +84,28 @@ main {
 	transform: scale(1.618);
 }
 
+/* Photo gallery with full images (no cropping) */
+.photo-gallery-full {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1rem;
+	margin: 2rem 0;
+	align-items: start;
+}
+
+.photo-gallery-full img {
+	width: 100%;
+	height: auto;
+	border-radius: 0.5rem;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-gallery-full img:hover {
+	transform: scale(1.05);
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	z-index: 10;
+}
+
 /* ============================================
    BUTTON STYLES - Reusable button components
    ============================================ */

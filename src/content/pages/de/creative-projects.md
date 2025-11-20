@@ -20,10 +20,11 @@ Du trägst eine Vision für eine positive Zukunft in dir, von der du möchtest, 
 Eine große Leidenschaft von mir ist es die Dinge, die sich in Fotos schwer darstellen lassen durch meine Illustrationen zu verbildlichen und so komplexe Themen greifbarer zu machen.
 
 Hier siehst du eine kleine Auswahl von Illustrationen, die ich für Greenpeace Deutschland angefertigt habe.
-<div class="photo-gallery">
-  <img src="/images/creative/alchemie.jpg" alt="illustration von händen mit einer glitzernden spirale">
-  <img src="/images/creative/gefuehle.jpg" alt="illustration eines menschlichen herzens mit megaphon">
-  <img src="/images/creative/politisch.jpg" alt="illustration: eine demo zur agrarwende">
-  <img src="/images/creative/kompass.jpg" alt="illustration: kompass mit wahl und friedenstaube">
-  <img src="/images/creative/rollen.jpg" alt="Illustration: Verschiedene Charaktere">
+
+<div class="photo-gallery-full">
+  <img src="/images/creative/rollen.jpg" alt="Illustration: verschiedene Charaktere">
+  <img src="/images/creative/gefuehle.jpg" alt="Illustration eines menschlichen herzens mit megaphon">
+  <img src="/images/creative/politisch.jpg" alt="Illustration: eine demo zur agrarwende">
+  <img src="/images/creative/alchemie.jpg" alt="Illustration von händen mit einer glitzernden spirale">
+  <img src="/images/creative/kompass.jpg" alt="Illustration: kompass mit wahl und friedenstaube">
 </div>
