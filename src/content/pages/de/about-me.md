@@ -19,12 +19,12 @@ Ich liebe es, Fragen zu stellen, die dazu einladen, gedanklich neue Wege zu erfo
 Ich liebe es, mit meinen Händen Schönes zu erschaffen – ob mit Häkelnadel, Pinsel oder Stift – und dabei Zeit und Raum zu vergessen.
 
 
-### Meine Wurzeln in der Klimabewegung
+## Meine Wurzeln in der Klimabewegung
 Die deutsche Klimabewegung hat mich geprägt. Jahrelang habe ich in der Nürnberger Greenpeace-Gruppe die Öffentlichkeitsarbeit betreut und die Gruppe als Koordinatorin durch die schwierigen Corona-Jahre gelotst. Das Klimacamp war eine Zeit lang meine zweite Heimat und ein wundervoller Experimentierboden, der meine politikwissenschaftlichen und philosophischen Studien mit dem Nährboden der kommunalpolitischen Realität versorgt hat.
 
 
 
-### Von Nürnberg nach Vancouver
+## Von Nürnberg nach Vancouver
 Dann hat es mich in die weite Ferne gezogen, wo ich in Vancouver meinen Master in Communication for Social Change mit einem Fokus auf gelingender Klimakommunikation absolviert habe. Ich war fasziniert von der Frage, was es braucht, um Klima Engagement zu fördern und so zu gestalten, dass es Spaß macht und persönliches Wachstum ermöglicht.
 
 Ich bin überzeugt davon, dass ein klares Ziel von der Welt, die wir gemeinsam bilden wollen, eine entscheidende Rolle spielt, damit wir uns einsetzen und uns auch langfristig gesehen nicht die Puste ausgeht, selbst wenn es manchmal ganz schön viel Gegenwind gibt.

@@ -3,7 +3,7 @@ title: "Startseite"
 description: "Pädagogin und Künstlerin Julia Salomon verbindet Klimabildung mit kreativen Lernformaten."
 ---
 
-## Nur was wir uns vorstellen- können wir gestalten
+## Nur was wir uns vorstellen, können wir gestalten
 
 
 Ich bin Julia Salomon, Trainerin für positive Zukunftsvisionen, E-Learning-Entwicklerin, Klimaaktivistin und Geschichtenerzählerin.
@@ -14,7 +14,7 @@ Menschen dabei zu unterstützen, ihren ganz persönlichen Weg zu finden, wie sie
 
 Seit meinem 18.&nbsp;Lebensjahr engagiere ich mich bei Greenpeace und verbinde praktische Aktivismus-Erfahrung mit akademischer Expertise in Politikwissenschaft, Philosophie und einem Master in Communication for Social Change.
 
-### Was ich mache:
+### Was ich mache
 
 Als **Workshop-Facilitatorin und Public Speakerin** lade ich im Rahmen meiner Workshop-Reihe [Project Futopia](./project-futopia) dazu ein, gemeinsam unsere "Imagination Muscles" zu trainieren – für eine nachhaltige Zukunft, auf die wir richtig Lust haben.
 
