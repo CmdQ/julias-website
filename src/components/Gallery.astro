@@ -11,19 +11,25 @@ interface Props {
 }
 
 const { images } = Astro.props;
+const count = images.length;
 ---
 <div class="photo-gallery">
-	{images.map((img, i) => {
-		const id = `lb-${i}`;
-		return (
-			<>
-				<a href={`#${id}`}>
-					<Image src={img.src} alt={img.alt} widths={[400, 800]} sizes="(max-width: 640px) 100vw, 400px" />
-				</a>
-				<a href="#_" id={id} class="lightbox">
-					<Image src={img.src} alt={img.alt} widths={[1200]} />
-				</a>
-			</>
-		);
-	})}
+	{images.map((img, i) => (
+		<a href={`#lb-${i}`} class="photo-gallery-thumb">
+			<Image src={img.src} alt={img.alt} width={400} height={Math.round(400 * img.src.height / img.src.width)} />
+		</a>
+	))}
 </div>
+
+{images.map((img, i) => {
+	const prev = i > 0 ? `#lb-${i - 1}` : undefined;
+	const next = i < count - 1 ? `#lb-${i + 1}` : undefined;
+	return (
+		<div id={`lb-${i}`} class="lightbox">
+			<a href="#_" class="lightbox-close" aria-label="Close">✕</a>
+			{prev && <a href={prev} class="lightbox-nav lightbox-prev" aria-label="Previous">‹</a>}
+			{next && <a href={next} class="lightbox-nav lightbox-next" aria-label="Next">›</a>}
+			<Image src={img.src} alt={img.alt} width={1600} height={Math.round(1600 * img.src.height / img.src.width)} class="lightbox-img" />
+		</div>
+	);
+})}
