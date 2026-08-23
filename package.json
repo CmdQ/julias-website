@@ -3,19 +3,19 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "node scripts/check-i18n-pages.mjs && astro dev",
-    "build": "node scripts/check-i18n-pages.mjs && astro build",
-    "preview": "astro preview",
-    "astro": "astro",
+    "dev": "bun scripts/check-i18n-pages.mjs && bunx --bun astro dev",
+    "build": "bun scripts/check-i18n-pages.mjs && bunx --bun astro build",
+    "preview": "bunx --bun astro preview",
+    "astro": "bunx --bun astro",
     "check:i18n": "node scripts/check-i18n-pages.mjs"
   },
   "dependencies": {
+    "@astrojs/mdx": "4",
     "astro": "^5.15.9"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.16",
-    "tailwindcss": "^4.1.16",
-    "unist-util-visit": "^5.0.0"
+    "tailwindcss": "^4.1.16"
   }
 }

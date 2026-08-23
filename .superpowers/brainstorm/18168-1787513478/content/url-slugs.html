@@ -1,0 +1,49 @@
+<h2>URL-Slugs: Welche Sprache?</h2>
+<p class="subtitle">Dateinamen müssen für DE und EN identisch sein (i18n-Validierung)</p>
+
+<div class="options">
+  <div class="option" data-choice="english" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Alles Englisch</h3>
+      <p>Internationaler Standard, viele DE-Websites machen das so</p>
+      <pre style="font-size: 0.8rem; margin: 0.5rem 0; background: rgba(0,0,0,0.3); padding: 0.5rem; border-radius: 0.25rem;">
+/de/about/
+/de/future-project/
+/de/communication/
+/de/creative-projects/
+/de/contact/
+/de/privacy/</pre>
+    </div>
+  </div>
+
+  <div class="option" data-choice="german" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Alles Deutsch</h3>
+      <p>Konsequent, aber EN-Besucher sehen deutsche URLs</p>
+      <pre style="font-size: 0.8rem; margin: 0.5rem 0; background: rgba(0,0,0,0.3); padding: 0.5rem; border-radius: 0.25rem;">
+/de/ueber-mich/
+/de/projekt-zukunft/
+/de/kommunikation/
+/de/kreative-projekte/
+/de/kontakt/
+/de/datenschutz/</pre>
+    </div>
+  </div>
+
+  <div class="option" data-choice="short" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Kurz & neutral</h3>
+      <p>Sprachneutrale, kurze Slugs — funktionieren in beiden Sprachen</p>
+      <pre style="font-size: 0.8rem; margin: 0.5rem 0; background: rgba(0,0,0,0.3); padding: 0.5rem; border-radius: 0.25rem;">
+/de/about/
+/de/zukunft/
+/de/training/
+/de/creative/
+/de/contact/
+/de/privacy/</pre>
+    </div>
+  </div>
+</div>

@@ -1,10 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
 import tailwind from '@tailwindcss/vite';
-import { remarkLocaleLinks } from './src/plugins/remark-locale-links.mjs';
-import { remarkLightboxGallery } from './src/plugins/remark-lightbox-gallery.mjs';
 
-// https://astro.build/config
 export default defineConfig({
 	site: 'https://julia-salomon.de',
 	base: '/',
@@ -12,12 +10,7 @@ export default defineConfig({
 		locales: ['en', 'de'],
 		defaultLocale: 'de',
 	},
-	markdown: {
-		remarkPlugins: [
-			[remarkLocaleLinks, { base: '' }],
-			remarkLightboxGallery
-		],
-	},
+	integrations: [mdx()],
 	vite: {
 		plugins: [tailwind()],
 	},

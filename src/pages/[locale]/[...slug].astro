@@ -11,10 +11,8 @@ export const getStaticPaths = (async () => {
 	const allPages = await getCollection('pages');
 
 	return allPages.map(entry => {
-		// Extract locale and page name from id like 'en/index.md' or 'de/contact.md'
 		const [locale, ...rest] = entry.id.split('/');
-		const pageName = rest.join('/').replace('.md', '');
-		// For index, use undefined (becomes /locale/), for others use the page name
+		const pageName = rest.join('/').replace(/\.mdx?$/, '');
 		const slug = pageName === 'index' ? undefined : pageName;
 
 		return {
@@ -29,7 +27,6 @@ const { Content } = await entry.render();
 
 const lang = Astro.params.locale as 'en' | 'de';
 const currentPath = Astro.url.pathname;
-// Generate alternate path by swapping the locale
 const otherLocale = lang === 'en' ? 'de' : 'en';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const alternatePath = currentPath.replace(`${base}/${lang}/`, `${base}/${otherLocale}/`);

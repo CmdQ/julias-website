@@ -2,6 +2,12 @@
 title: "Kreative Praxis"
 description: "Kollaborative Kunst- und Medienprojekte, die komplexe Inhalte in menschliche Geschichten übersetzen."
 ---
+import Gallery from '../../../components/Gallery.astro';
+import gefuehle from '../../../assets/images/creative/gefuehle.jpg';
+import politisch from '../../../assets/images/creative/politisch.jpg';
+import rollen from '../../../assets/images/creative/rollen.jpg';
+import alchemie from '../../../assets/images/creative/alchemie.jpg';
+import kompass from '../../../assets/images/creative/kompass.jpg';
 
 ## Mein Debütroman
 
@@ -21,10 +27,10 @@ Eine große Leidenschaft von mir ist es die Dinge, die sich in Fotos schwer dars
 
 Hier siehst du eine kleine Auswahl von Illustrationen, die ich für Greenpeace Deutschland angefertigt habe.
 
-<div class="photo-gallery-full">
-  <img src="/images/creative/gefuehle.jpg" alt="Illustration eines menschlichen Herzens mit Megaphon">
-  <img src="/images/creative/politisch.jpg" alt="Illustration: eine Demo zur Agrarwende">
-  <img src="/images/creative/rollen.jpg" alt="Illustration: verschiedene Charaktere">
-  <img src="/images/creative/alchemie.jpg" alt="Illustration von Händen mit einer glitzernden Sppirale">
-  <img src="/images/creative/kompass.jpg" alt="Illustration: Kompass mit Wal und Friedenstaube">
-</div>
+<Gallery images={[
+  { src: gefuehle, alt: 'Illustration eines menschlichen Herzens mit Megaphon' },
+  { src: politisch, alt: 'Illustration: eine Demo zur Agrarwende' },
+  { src: rollen, alt: 'Illustration: verschiedene Charaktere' },
+  { src: alchemie, alt: 'Illustration von Händen mit einer glitzernden Spirale' },
+  { src: kompass, alt: 'Illustration: Kompass mit Wal und Friedenstaube' },
+]} />

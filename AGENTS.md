@@ -19,9 +19,10 @@ References:
 ## 2) Tech stack (decisions)
 - **Framework:** Astro (static output).
 - **Runtime:** **Node LTS** (target Node 22; Node 20+ acceptable).
-- **Package manager:** **pnpm** (single lockfile `pnpm-lock.yaml`).
-- **Styling:** **Tailwind v4** via `@tailwindcss/vite`; add `@tailwindcss/typography` if needed.
+- **Package manager:** **bun** (single lockfile `bun.lockb`).
+- **Styling:** **Tailwind v4** via `@tailwindcss/vite`; `@tailwindcss/typography` for prose.
 - **Language:** TypeScript preferred in `.astro` frontmatter and utilities.
+- **Content format:** **MDX** via `@astrojs/mdx` — enables Astro component imports (Gallery, Image) inside content files.
 - **No SPA framework** initially (React/Svelte/Vue). If needed later, prefer **Svelte** for small, self‑contained widgets.
 
 References:
@@ -43,10 +44,11 @@ References:
 ---
 
 ## 4) Information architecture (initial)
-- **Top‑level pages (per locale):** Home, Project Futopia, Climate Education / Public Speaking, Creative Projects, Contact (mailto).
+- **Top‑level pages (per locale):** Home, Über mich / About me, Projekt Zukunft / Future Project, Kommunikation / Communication, Kreativ / Creative, Kontakt / Contact.
+- **URL slugs:** Short, language-neutral: `/about/`, `/zukunft/`, `/training/`, `/creative/`, `/contact/`, `/privacy/`.
 - **Content model (works):**
-  Frontmatter: `title`, `date?`, `medium?`, `dimensions?`, `image`, `alt`, `locale`, `tags?`.
-- **Assets:** `/public/images/works/<slug>.jpg` (plus optional `@1x/@2x` variants or responsive pipeline later).
+  Frontmatter: `title`, `description?`.
+- **Assets:** `/src/assets/images/` (Astro-optimized), `/public/images/hero.jpg` (unoptimized).
 
 ---
 
@@ -92,7 +94,7 @@ References:
 - **Formatting:** Prettier (Astro + Tailwind plugin optional for class sorting).
 - **Linting:** keep minimal; rely on TypeScript + editor hints.
 - **Branches:** feature branches → PR → `main` (auto‑deploy).
-- **Do not mix package managers**; **do not commit multiple lockfiles**. [5](https://docs.astro.build/en/guides/deploy/github/)
+- **Do not mix package managers**; **do not commit multiple lockfiles**. Use `bun` for all package operations. [5](https://docs.astro.build/en/guides/deploy/github/)
 
 ---
 

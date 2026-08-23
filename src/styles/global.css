@@ -1,51 +1,27 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-/* ============================================
-   COLOR PALETTE - All colors in one place
-   ============================================ */
 :root {
-	--color-bg-cream: rgb(240, 238, 182);      /* 1. Warm cream background */
-	--color-highlight: rgb(226, 219, 70);      /* 2. Bright yellow highlight */
-	--color-highlight-dark: rgb(216, 209, 50); /* 3. Darker yellow for gradients */
-	--color-text-dark: rgb(59, 55, 47);        /* 4. Dark brown text */
-	--color-text-muted: rgb(51, 65, 85);       /* 5. Muted text for prose */
-	--color-white: rgb(255, 255, 255);         /* 6. Pure white */
+	--color-bg-cream: rgb(240, 238, 182);
+	--color-highlight: rgb(226, 219, 70);
+	--color-highlight-dark: rgb(216, 209, 50);
+	--color-text-dark: rgb(59, 55, 47);
+	--color-text-muted: rgb(51, 65, 85);
+	--color-white: rgb(255, 255, 255);
 }
 
 body {
 	background-color: var(--color-bg-cream);
 	color: var(--color-text-dark);
 	margin: 0;
-	scroll-behavior: smooth;
 }
 
-/* Enhance text selection */
 ::selection {
 	background-color: var(--color-highlight);
 	color: var(--color-text-dark);
 }
 
-/* Add subtle animation to page content */
-main {
-	animation: fadeInUp 0.6s ease-out;
-}
-
-@keyframes fadeInUp {
-	from {
-		opacity: 0;
-		transform: translateY(20px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-/* Prose styling - using @tailwindcss/typography with custom color overrides */
-/* Most styling is handled by Tailwind Typography plugin in the template */
-
-/* Reduce gap between blockquote and attribution text */
+/* Prose overrides */
 .prose blockquote {
 	margin-bottom: 0.25rem;
 }
@@ -58,7 +34,6 @@ main {
 	margin-top: 0;
 }
 
-/* Make bullet points and list markers more visible */
 .prose ul > li::marker,
 .prose ol > li::marker {
 	color: var(--color-text-dark);
@@ -77,36 +52,9 @@ main {
 	height: 200px;
 	object-fit: cover;
 	border-radius: 0.5rem;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.photo-gallery img:hover {
-	transform: scale(1.618);
-}
-
-/* Photo gallery with full images (no cropping) */
-.photo-gallery-full {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	gap: 1rem;
-	margin: 2rem 0;
-	align-items: start;
-}
-
-.photo-gallery-full img {
-	width: 100%;
-	height: auto;
-	border-radius: 0.5rem;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.photo-gallery-full img:hover {
-	transform: scale(1.05);
-	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-	z-index: 10;
-}
-
-/* Lightbox (CSS only) */
+/* Lightbox (CSS only, no JS) */
 .lightbox {
 	display: none;
 	position: fixed;
@@ -124,7 +72,6 @@ main {
 
 .lightbox:target {
 	display: flex;
-	animation: fadeIn 0.3s ease-out;
 }
 
 .lightbox img {
@@ -133,104 +80,4 @@ main {
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 	border-radius: 4px;
 	object-fit: contain;
-}
-
-@keyframes fadeIn {
-	from { opacity: 0; }
-	to { opacity: 1; }
-}
-
-/* ============================================
-   BUTTON STYLES - Reusable button components
-   ============================================ */
-
-/* Shared button base styles */
-.btn-primary,
-.btn-secondary {
-	position: relative;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	gap: 0.75rem;
-	overflow: hidden;
-	border-radius: 1rem;
-	padding: 1.25rem 2rem;
-	font-size: 1rem;
-	font-weight: 700;
-	color: var(--color-text-dark);
-	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-	transition: all 0.3s;
-	text-decoration: none;
-}
-
-.btn-primary::before,
-.btn-secondary::before {
-	content: '';
-	position: absolute;
-	inset: 0;
-	transition: transform 0.3s;
-}
-
-.btn-primary:hover,
-.btn-secondary:hover {
-	box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-	transform: scale(1.05);
-}
-
-.btn-primary:focus,
-.btn-secondary:focus {
-	outline: none;
-	box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-highlight) 50%, transparent);
-}
-
-/* Primary button specific styles */
-.btn-primary {
-	background: linear-gradient(to right, var(--color-highlight), var(--color-highlight-dark));
-}
-
-.btn-primary::before {
-	background-color: color-mix(in srgb, var(--color-white) 20%, transparent);
-	transform: translateX(-100%);
-	transition: transform 0.5s;
-}
-
-.btn-primary:hover::before {
-	transform: translateX(100%);
-}
-
-/* Secondary button specific styles */
-.btn-secondary {
-	background-color: color-mix(in srgb, var(--color-white) 90%, transparent);
-	backdrop-filter: blur(4px);
-	border: 1px solid color-mix(in srgb, var(--color-highlight) 30%, transparent);
-}
-
-.btn-secondary::before {
-	background: linear-gradient(to right, var(--color-highlight), var(--color-highlight-dark));
-	transform: translateY(100%);
-}
-
-.btn-secondary:hover {
-	background-color: var(--color-highlight);
-}
-
-.btn-secondary:hover::before {
-	transform: translateY(0);
-}
-
-.btn-icon {
-	font-size: 1.125rem;
-	transition: transform 0.3s;
-	position: relative;
-	z-index: 10;
-}
-
-.btn-primary:hover .btn-icon,
-.btn-secondary:hover .btn-icon {
-	transform: translateX(0.25rem);
-}
-
-.btn-text {
-	position: relative;
-	z-index: 10;
 }

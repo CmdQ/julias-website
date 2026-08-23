@@ -10,8 +10,8 @@ const __dirname = dirname(__filename);
 const contentDir = join(__dirname, '../src/content/pages');
 
 // Get all files in each locale directory
-const enFiles = readdirSync(join(contentDir, 'en')).filter(f => f.endsWith('.md'));
-const deFiles = readdirSync(join(contentDir, 'de')).filter(f => f.endsWith('.md'));
+const enFiles = readdirSync(join(contentDir, 'en')).filter(f => f.endsWith('.mdx') || f.endsWith('.md'));
+const deFiles = readdirSync(join(contentDir, 'de')).filter(f => f.endsWith('.mdx') || f.endsWith('.md'));
 
 const enSet = new Set(enFiles);
 const deSet = new Set(deFiles);

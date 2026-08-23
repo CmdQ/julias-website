@@ -13,28 +13,33 @@ interface Props {
 	alternates?: AlternateLinks;
 }
 
-const siteName = "Julia's Portfolio";
+const siteName = 'Julia Salomon';
 const { lang, title, description, alternates = {} }: Props = Astro.props;
 const pageTitle = title ? `${title} · ${siteName}` : siteName;
 
-// Normalize base URL - remove trailing slash to avoid double slashes
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const subtitles = {
+	en: 'Trainer for Positive Futures\nand Active Hope',
+	de: 'Trainerin für positive Zukunftsvisionen\nund aktive Hoffnung',
+} as const;
+
 const localeNav = {
 	en: [
 		{ href: `${base}/en/`, label: 'Home' },
-		{ href: `${base}/en/about-me/`, label: 'About me' },
+		{ href: `${base}/en/about/`, label: 'About me' },
+		{ href: `${base}/en/zukunft/`, label: 'Future Project' },
+		{ href: `${base}/en/training/`, label: 'Communication' },
+		{ href: `${base}/en/creative/`, label: 'Creative' },
 		{ href: `${base}/en/contact/`, label: 'Contact' },
-		{ href: `${base}/en/project-futopia/`, label: 'Project Futopia' },
-		{ href: `${base}/en/climate-education/`, label: 'Climate Education' },
-		{ href: `${base}/en/creative-projects/`, label: 'Creative Projects' },
 	],
 	de: [
 		{ href: `${base}/de/`, label: 'Home' },
-		{ href: `${base}/de/about-me/`, label: 'About me' },
+		{ href: `${base}/de/about/`, label: 'Über mich' },
+		{ href: `${base}/de/zukunft/`, label: 'Projekt Zukunft' },
+		{ href: `${base}/de/training/`, label: 'Kommunikation' },
+		{ href: `${base}/de/creative/`, label: 'Kreativ' },
 		{ href: `${base}/de/contact/`, label: 'Kontakt' },
-		{ href: `${base}/de/project-futopia/`, label: 'Projekt Futopia' },
-		{ href: `${base}/de/climate-education/`, label: 'Climate Education' },
-		{ href: `${base}/de/creative-projects/`, label: 'Kreative Projekte' },
 	],
 } as const;
 
@@ -43,8 +48,8 @@ const otherLocale = lang === 'en' ? 'de' : 'en';
 const switchHref = alternates[otherLocale] ?? `${base}/${otherLocale}/`;
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
 const currentPath = Astro.url.pathname;
+const subtitle = subtitles[lang];
 
-// Build hreflang alternates
 const hreflangAlternates = {
 	en: alternates.en ?? `${base}/en/`,
 	de: alternates.de ?? `${base}/de/`,
@@ -67,63 +72,65 @@ const hreflangAlternates = {
 	<body class="min-h-screen" style="background-color: rgb(10, 24, 34);">
 		<div class="mx-auto max-w-5xl" style="background-color: var(--color-bg-cream);">
 
-	<!-- Hero Image - scrolls away -->
+	<!-- Hero Image -->
 	<div class="relative w-full overflow-hidden">
 		<img
 			src={`${base}/images/hero.jpg`}
-			alt="Julia Salomon - Educator and Artist"
+			alt="Julia Salomon"
 			class="w-full h-auto"
 		/>
-	</div>		<!-- Navigation Wrapper -->
-		<!-- Mobile: display: contents (children act as direct siblings of main container) -->
-		<!-- Desktop: sticky header flex row -->
-		<div class="contents sm:sticky sm:top-0 sm:z-40 sm:flex sm:w-full sm:flex-row sm:items-center sm:justify-between sm:px-4 sm:py-2 lg:px-6 lg:py-8" style="background-color: var(--color-highlight);">
+	</div>
 
-			<!-- Name Section -->
-			<div class="w-full px-4 py-4 sm:w-auto sm:p-0" style="background-color: var(--color-highlight);">
-				<p class="text-xs sm:text-sm uppercase tracking-[0.2em] font-bold" style="color: var(--color-text-dark); opacity: 0.7;">Climate Communicator</p>
-				<h1 class="m-0 text-3xl sm:text-4xl font-black drop-shadow-sm" style="color: var(--color-text-dark);">Julia Salomon</h1>
-			</div>
+	<!-- Navigation Wrapper -->
+	<div class="contents sm:sticky sm:top-0 sm:z-40 sm:flex sm:w-full sm:flex-row sm:items-center sm:justify-between sm:px-4 sm:py-3 lg:px-6" style="background-color: var(--color-highlight);">
 
-			<!-- Nav Section -->
-			<nav
-				aria-label={lang === 'en' ? 'Primary' : 'Hauptnavigation'}
-				class="sticky top-0 z-40 grid w-full grid-cols-2 gap-2 px-4 py-2 shadow-md sm:static sm:w-auto sm:grid-cols-3 sm:gap-4 sm:p-0 sm:shadow-none"
-				style="background-color: var(--color-highlight);"
-			>
-				{navItems.map((item) => {
-					const isActive = currentPath === item.href || currentPath === item.href.replace(/\/$/, '');
-					return (
-					<a
-						class="group rounded-xl px-3 py-2 text-center text-sm font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 border backdrop-blur-sm lg:px-4 lg:py-3 lg:text-base"
-						style={isActive
-							? "color: var(--color-text-dark); border-color: var(--color-text-dark); background-color: color-mix(in srgb, var(--color-white) 70%, transparent); --tw-ring-color: var(--color-text-dark);"
-							: "color: var(--color-text-dark); border-color: color-mix(in srgb, var(--color-text-dark) 20%, transparent); background-color: color-mix(in srgb, var(--color-white) 30%, transparent); --tw-ring-color: var(--color-text-dark);"}
-						href={item.href}
-						aria-current={isActive ? 'page' : undefined}
-					>
-						{item.label}
-					</a>
-				)})}
-			</nav>
+		<!-- Name Section -->
+		<div class="w-full px-4 py-4 sm:w-auto sm:p-0" style="background-color: var(--color-highlight);">
+			<h1 class="m-0 text-3xl sm:text-[2rem] font-black drop-shadow-sm" style="color: var(--color-text-dark);">Julia Salomon</h1>
+			<p class="mt-1 text-base sm:text-[1.1rem] font-semibold leading-snug whitespace-pre-line" style="color: var(--color-text-dark); opacity: 0.8;">{subtitle}</p>
 		</div>
-		<main id="main-content" class="w-full px-6 py-12 sm:px-12">
-			<slot />
-		</main>
-		<footer style="background-color: var(--color-bg-cream);">
-			<div class="flex w-full flex-col gap-4 px-6 py-8 sm:flex-row sm:items-center sm:justify-between">
-				<p class="m-0 text-sm" style="color: var(--color-text-dark); opacity: 0.7;">© {new Date().getFullYear()} Julia Salomon</p>
-				<div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
-				<a class="text-sm font-semibold hover:underline" style="color: var(--color-text-dark);" href={lang === 'en' ? `${base}/en/privacy/` : `${base}/de/privacy/`}>
+
+		<!-- Nav Section -->
+		<nav
+			aria-label={lang === 'en' ? 'Primary' : 'Hauptnavigation'}
+			class="sticky top-0 z-40 grid w-full grid-cols-3 gap-1 px-4 py-2 shadow-md sm:static sm:w-auto sm:gap-1.5 sm:p-0 sm:shadow-none"
+			style="background-color: var(--color-highlight);"
+		>
+			{navItems.map((item) => {
+				const isActive = currentPath === item.href || currentPath === item.href.replace(/\/$/, '');
+				return (
+				<a
+					class="rounded-xl px-3 py-2 text-center text-sm font-bold transition-colors border"
+					style={isActive
+						? "color: var(--color-text-dark); border-color: var(--color-text-dark); background-color: color-mix(in srgb, var(--color-white) 70%, transparent);"
+						: "color: var(--color-text-dark); border-color: color-mix(in srgb, var(--color-text-dark) 20%, transparent); background-color: color-mix(in srgb, var(--color-white) 30%, transparent);"}
+					href={item.href}
+					aria-current={isActive ? 'page' : undefined}
+				>
+					{item.label}
+				</a>
+			)})}
+		</nav>
+	</div>
+
+	<main id="main-content" class="w-full px-6 py-12 sm:px-12">
+		<slot />
+	</main>
+
+	<footer style="background-color: var(--color-bg-cream);">
+		<div class="flex w-full flex-col gap-4 px-6 py-8 sm:flex-row sm:items-center sm:justify-between">
+			<p class="m-0 text-sm" style="color: var(--color-text-dark); opacity: 0.7;">© {new Date().getFullYear()} Julia Salomon</p>
+			<div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+				<a class="text-sm font-semibold hover:underline" style="color: var(--color-text-dark);" href={`${base}/${lang}/privacy/`}>
 					{lang === 'en' ? 'Privacy Notice' : 'Datenschutz'}
 				</a>
-					<a class="inline-flex items-center gap-2 text-sm font-semibold" style="color: var(--color-text-dark);" href={switchHref}>
-						<span aria-hidden="true">🌐</span>
-						{lang === 'en' ? 'Deutsch' : 'English'}
-					</a>
-				</div>
+				<a class="inline-flex items-center gap-2 text-sm font-semibold" style="color: var(--color-text-dark);" href={switchHref}>
+					<span aria-hidden="true">🌐</span>
+					{lang === 'en' ? 'Deutsch' : 'English'}
+				</a>
 			</div>
-		</footer>
+		</div>
+	</footer>
 		</div>
 	</body>
 </html>

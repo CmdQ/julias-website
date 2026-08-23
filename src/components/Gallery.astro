@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+
+interface GalleryImage {
+	src: ImageMetadata;
+	alt: string;
+}
+
+interface Props {
+	images: GalleryImage[];
+}
+
+const { images } = Astro.props;
+---
+<div class="photo-gallery">
+	{images.map((img, i) => {
+		const id = `lb-${i}`;
+		return (
+			<>
+				<a href={`#${id}`}>
+					<Image src={img.src} alt={img.alt} widths={[400, 800]} sizes="(max-width: 640px) 100vw, 400px" />
+				</a>
+				<a href="#_" id={id} class="lightbox">
+					<Image src={img.src} alt={img.alt} widths={[1200]} />
+				</a>
+			</>
+		);
+	})}
+</div>

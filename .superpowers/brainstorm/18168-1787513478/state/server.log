@@ -1,0 +1,9 @@
+{"type":"server-started","port":50388,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:50388","screen_dir":"/home/clash/src/julias-website/.superpowers/brainstorm/18168-1787513478/content","state_dir":"/home/clash/src/julias-website/.superpowers/brainstorm/18168-1787513478/state"}
+{"type":"screen-added","file":"/home/clash/src/julias-website/.superpowers/brainstorm/18168-1787513478/content/site-structure.html"}
+{"type":"screen-added","file":"/home/clash/src/julias-website/.superpowers/brainstorm/18168-1787513478/content/url-slugs.html"}
+{"source":"user-event","type":"click","text":"C\n    \n      Kurz & neutral\n      Sprachneutrale, kurze Slugs — funktionieren in beiden Sprachen\n      /de/about/\n/de/zukunft/\n/de/training/\n/de/creative/\n/de/contact/\n/de/privacy/","choice":"short","id":null,"timestamp":1787514504874}
+{"type":"screen-added","file":"/home/clash/src/julias-website/.superpowers/brainstorm/18168-1787513478/content/header-layout.html"}
+{"type":"screen-added","file":"/home/clash/src/julias-website/.superpowers/brainstorm/18168-1787513478/content/header-v2.html"}
+{"type":"screen-added","file":"/home/clash/src/julias-website/.superpowers/brainstorm/18168-1787513478/content/header-v3.html"}
+{"type":"screen-added","file":"/home/clash/src/julias-website/.superpowers/brainstorm/18168-1787513478/content/header-v4.html"}
+{"type":"screen-added","file":"/home/clash/src/julias-website/.superpowers/brainstorm/18168-1787513478/content/waiting.html"}
