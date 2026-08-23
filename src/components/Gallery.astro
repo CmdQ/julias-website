@@ -33,3 +33,20 @@ const count = images.length;
 		</div>
 	);
 })}
+
+<script>
+	document.addEventListener('keydown', (e) => {
+		const hash = location.hash;
+		if (!hash.startsWith('#lb-')) return;
+		const i = parseInt(hash.slice(4));
+		if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+			const next = document.getElementById(`lb-${i + 1}`);
+			if (next) { e.preventDefault(); location.hash = `lb-${i + 1}`; }
+		} else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+			const prev = document.getElementById(`lb-${i - 1}`);
+			if (prev) { e.preventDefault(); location.hash = `lb-${i - 1}`; }
+		} else if (e.key === 'Escape') {
+			e.preventDefault(); location.hash = '_';
+		}
+	});
+</script>
