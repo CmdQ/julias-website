@@ -80,8 +80,7 @@ src/
 │       ├── haekeln/
 │       └── big/
 ├── components/
-│   ├── Gallery.astro     ← CSS-only lightbox gallery
-│   └── OptImage.astro    ← thin <Image> wrapper (optional)
+│   └── Gallery.astro     ← CSS-only lightbox gallery
 ├── content/
 │   ├── config.ts
 │   └── pages/
@@ -145,18 +144,20 @@ Same as current — no schema changes needed.
 
 ### Gallery.astro
 
-CSS-only lightbox gallery component. Used in MDX as:
+CSS-only lightbox gallery component. Accepts imported Astro image objects for optimization. Used in MDX as:
 
 ```mdx
 import Gallery from '../../components/Gallery.astro';
+import vortrag from '../../assets/images/futopia/vortrag.jpg';
+import lego from '../../assets/images/futopia/lego.jpg';
 
 <Gallery images={[
-  { src: '/images/futopia/vortrag.jpg', alt: 'Julia gibt einen Vortrag' },
-  { src: '/images/futopia/lego.jpg', alt: 'Teilnehmende bauen mit Lego' },
+  { src: vortrag, alt: 'Julia gibt einen Vortrag' },
+  { src: lego, alt: 'Teilnehmende bauen mit Lego' },
 ]} />
 ```
 
-Implementation: renders a grid of thumbnails, each linking to a `:target`-based CSS lightbox overlay. No JavaScript.
+Implementation: renders a grid of `<Image>` thumbnails (optimized), each linking to a `:target`-based CSS lightbox overlay. Lightbox shows full-size image. No JavaScript.
 
 ### Image Optimization
 
