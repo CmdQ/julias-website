@@ -4,8 +4,8 @@ import mdx from '@astrojs/mdx';
 import tailwind from '@tailwindcss/vite';
 
 export default defineConfig({
-	site: 'https://cmdq.github.io',
-	base: '/julias-website',
+	site: 'https://julia-salomon.de',
+	base: '/',
 	i18n: {
 		locales: ['en', 'de'],
 		defaultLocale: 'de',
